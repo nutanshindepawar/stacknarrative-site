@@ -1,12 +1,10 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import {RobotIcon} from '@sanity/icons'
 
 // An AI agent shown on /agents and in the home page teaser.
 export const agentType = defineType({
   name: 'agent',
   title: 'AI Agent',
   type: 'document',
-  icon: RobotIcon,
   fields: [
     defineField({name: 'name', type: 'string', validation: (r) => r.required()}),
     defineField({name: 'slug', type: 'slug', options: {source: 'name'}, validation: (r) => r.required()}),

@@ -1,12 +1,10 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import {CaseIcon} from '@sanity/icons'
 
 // A client card in the Work section of the home page.
 export const clientCaseType = defineType({
   name: 'clientCase',
   title: 'Client work',
   type: 'document',
-  icon: CaseIcon,
   fields: [
     defineField({name: 'name', title: 'Client name', type: 'string', validation: (r) => r.required()}),
     defineField({name: 'website', type: 'url'}),

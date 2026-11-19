@@ -63,7 +63,7 @@ $env:SN_SAMPLE_POST="1"; npm run build
 1. **Deploy the new Studio schemas** (adds AI agents, client work, pages and the new post fields):
    `npx sanity deploy`
 2. **Import current content** into Sanity (until then the site uses built-in copies):
-   `$env:SANITY_WRITE_TOKEN="<editor token>"; node scripts/seed-sanity.mts`
+   `npx sanity exec scripts/seed-sanity.mts --with-user-token` (uses your Sanity CLI login)
 3. **Cloudflare Pages**: connect this GitHub repo. Build command `npm run build`, output directory `out`, Node 20+, and the environment variables above.
 4. **Deploy hook**: in Cloudflare Pages > Settings > Builds > Deploy hooks, create a hook. In sanity.io/manage > API > Webhooks, add it as the URL (trigger on create, update and delete for all document types).
 5. **Domain**: point `stacknarrative.com` at the Pages project. The `/AI-content-ops-guide/*` Worker route keeps serving the toolbook.

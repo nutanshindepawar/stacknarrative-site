@@ -1,5 +1,4 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import {DocumentIcon} from '@sanity/icons'
 
 // A new page built from ready-made sections, published at /<slug>.
 const faqItem = defineArrayMember({
@@ -16,7 +15,6 @@ export const pageType = defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
-  icon: DocumentIcon,
   groups: [{name: 'content', default: true}, {name: 'seo', title: 'SEO & menu'}],
   fields: [
     defineField({name: 'title', type: 'string', group: 'content', validation: (r) => r.required()}),
