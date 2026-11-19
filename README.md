@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# stacknarrative.com
 
-## Getting Started
+The StackNarrative website: Next.js 16 (static export) + Sanity, hosted on Cloudflare Pages.
 
-First, run the development server:
+## How publishing works
 
-```bash
+1. You publish or update content in **Sanity Studio**.
+2. A Sanity webhook calls a **Cloudflare Pages deploy hook**.
+3. Cloudflare rebuilds the site (about 1–2 minutes) and the change is live.
+
+| In Sanity Studio | What happens on the site |
+|---|---|
+| **Blog posts** | Own page at `/blog/<slug>`, listed on `/blog`, newest shown on the home page, added to `sitemap.xml` and `llms.txt` |
+| **AI agents** | Card on `/agents` and the home page teaser |
+| **Client work** | Card in the Work section of the home page |
+| **Pages** | New page at `/<slug>` built from sections (hero, text, cards, FAQs, call to action). Tick "Show in menu" to add it to the menu. |
+
+Toolbook phases and the latest published toolbook entries are read from the toolbook's Supabase database at build time.
+
+### Writing posts for SEO and AEO
+
+Each post has fields that feed search and AI answer engines:
+
+- **Description**: shown under the title and used as the meta description (unless an SEO description is set).
+- **Quick answer**: one or two sentences that directly answer the post's main question. Shown in a box at the top.
+- **Key takeaways**: up to six short points.
+- **FAQs**: rendered at the end and published as FAQ structured data.
+- **Headings**: use H2s for main sections. With three or more, a table of contents appears automatically.
+- **Hero image**: also used as the social share image. Always fill in the alt text.
+
+Every page ships with a canonical URL, Open Graph tags and JSON-LD structured data (Organization, BlogPosting, FAQPage, BreadcrumbList).
+
+## Local development
+
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the static site into `out/`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Preview the article template before real posts exist (never in production):
 
-## Learn More
+```powershell
+$env:SN_SAMPLE_POST="1"; npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Name | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET` | Sanity project (`5jspd31o`, `production`) |
+| `NEXT_PUBLIC_TOOLBOOK_SUPABASE_URL`, `NEXT_PUBLIC_TOOLBOOK_SUPABASE_ANON_KEY` | Toolbook database, public read-only key |
+| `NEXT_PUBLIC_SITE_URL` | `https://stacknarrative.com` |
+| `NEXT_PUBLIC_FORM_ENDPOINT` | Contact form Google Apps Script web app URL (optional; empty = email fallback) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## One-time setup
 
-## Deploy on Vercel
+1. **Deploy the new Studio schemas** (adds AI agents, client work, pages and the new post fields):
+   `npx sanity deploy`
+2. **Import current content** into Sanity (until then the site uses built-in copies):
+   `$env:SANITY_WRITE_TOKEN="<editor token>"; node scripts/seed-sanity.mts`
+3. **Cloudflare Pages**: connect this GitHub repo. Build command `npm run build`, output directory `out`, Node 20+, and the environment variables above.
+4. **Deploy hook**: in Cloudflare Pages > Settings > Builds > Deploy hooks, create a hook. In sanity.io/manage > API > Webhooks, add it as the URL (trigger on create, update and delete for all document types).
+5. **Domain**: point `stacknarrative.com` at the Pages project. The `/AI-content-ops-guide/*` Worker route keeps serving the toolbook.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Old addresses (`/projects`, `/blog.html`, …) are redirected in `public/_redirects`.
