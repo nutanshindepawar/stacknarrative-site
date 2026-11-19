@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ToolbookPage() {
-  const [phases, entries] = await Promise.all([getPhases(), getLatestToolbook(6)]);
+  const [phases, entries] = await Promise.all([getPhases(), getLatestToolbook(2)]);
   return (
     <>
       <Toolbook phases={phases} entries={entries} />

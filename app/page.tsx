@@ -13,7 +13,7 @@ import ContactBand from "@/components/layout/contact-band";
 import { getAgents, getCases, getLatestToolbook, getPhases, getPosts } from "@/lib/content";
 
 export default async function Home() {
-  const [cases, phases, entries, posts, agents] = await Promise.all([getCases(), getPhases(), getLatestToolbook(4), getPosts(), getAgents()]);
+  const [cases, phases, entries, posts, agents] = await Promise.all([getCases(), getPhases(), getLatestToolbook(2), getPosts(), getAgents()]);
   return (
     <>
       <Hero />
