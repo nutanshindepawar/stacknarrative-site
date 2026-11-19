@@ -3,6 +3,7 @@
 /projects       /#work       301
 /projects.html  /#work       301
 /blog.html      /blog        301
+/blog-post.html /blog        301
 /about.html     /about       301
 /contact.html   /contact     301
 /blog/_placeholder  /blog  301
