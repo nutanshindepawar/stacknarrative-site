@@ -69,3 +69,21 @@ $env:SN_SAMPLE_POST="1"; npm run build
 5. **Domain**: point `stacknarrative.com` at the Pages project. The `/AI-content-ops-guide/*` Worker route keeps serving the toolbook.
 
 Old addresses (`/projects`, `/blog.html`, …) are redirected in `public/_redirects`.
+
+## Contact form
+
+The form posts to a Google Apps Script web app: [`apps-script/contact-form.gs`](apps-script/contact-form.gs).
+
+- Each enquiry is saved to the **Leads** tab of the Google Sheet first, then emailed to nutan@stacknarrative.com.
+- The visitor only sees "sent" once the row is saved. If saving fails, the form offers to send it by email instead.
+- The **Status** column shows `emailed`, or why the email didn't go out. Emails that couldn't be sent, for example because the daily quota ran out, are retried every hour.
+
+Setup:
+
+1. Using the Google account for nutan@stacknarrative.com, create a Google Sheet called "StackNarrative Leads".
+2. Go to **Extensions > Apps Script**, replace the sample code with `apps-script/contact-form.gs`, and save.
+3. Choose `setup` in the function dropdown, click **Run**, and allow access. This creates the Leads tab and the hourly retry.
+4. Go to **Deploy > New deployment > Web app**. Set **Execute as** to Me and **Who has access** to Anyone, then click **Deploy**. Copy the URL, which ends in `/exec`.
+5. Put the URL in `FORM_ENDPOINT` in `lib/site.ts` (or set `NEXT_PUBLIC_FORM_ENDPOINT`, which overrides it).
+
+After you edit the script: go to **Deploy > Manage deployments**, click the pencil icon, choose **Version: New version**, and click **Deploy**. The URL stays the same.

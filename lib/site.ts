@@ -10,7 +10,9 @@ export const TOOLBOOK_URL = `${SITE_URL}/AI-content-ops-guide`;
 export const TOOLBOOK_CONTRIBUTE_URL = `${TOOLBOOK_URL}/contribute`;
 export const FOUNDER = { name: "Nutan Pawar", jobTitle: "Founder, StackNarrative", linkedin: LINKEDIN_URL };
 
-// Contact form delivery (Google Apps Script web app URL ending in /exec). Empty = email fallback.
-export const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "";
+// Google Apps Script web app (apps-script/contact-form.gs). Public by design: it only accepts form posts.
+export const FORM_ENDPOINT =
+  process.env.NEXT_PUBLIC_FORM_ENDPOINT ||
+  "https://script.google.com/macros/s/AKfycbxdnuOXLGkIiu-OliRlWUDa3rlCsIiVzT-QhLZDVYlzko6sPauoSwE0C9doNZpj7g/exec";
 
 export const abs = (path: string) => (path.startsWith("http") ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`);
