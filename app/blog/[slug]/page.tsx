@@ -153,10 +153,6 @@ export default async function PostPage({ params }: Props) {
                 ))}
               </section>
             )}
-            <div className="share-end">
-              <p>Found this useful? Share it with your team.</p>
-              <Share url={url} title={post.title} />
-            </div>
           </div>
           <aside className="article-side" aria-label="Article tools">
             <div className="side-sticky">

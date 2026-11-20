@@ -684,8 +684,6 @@ footer{background:var(--ink);color:var(--cream-70);padding:40px 0 50px;border-to
 .side-cta-link{font-size:.85rem;font-weight:600;color:var(--cream);text-decoration-color:var(--green);text-underline-offset:3px}
 .share-mobile{display:none;margin-top:20px}
 .toc-mobile{display:none}
-.share-end{border-top:2px solid var(--ink-12);padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.share-end p{font-weight:700}
 @media (max-width:1000px){
   .article-layout{grid-template-columns:1fr}
   .article-side{display:none}
