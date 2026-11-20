@@ -177,6 +177,33 @@
     });
   }
 
+  // Blog: copy post link
+  $$("[data-copy-link]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var tip = b.querySelector(".share-copied");
+      var done = function (msg) {
+        if (!tip) return;
+        tip.textContent = msg; tip.classList.add("show");
+        setTimeout(function () { tip.classList.remove("show"); }, 1600);
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(b.getAttribute("data-copy-link")).then(function () { done("Link copied"); }, function () { done("Copy failed"); });
+      else done("Copy failed");
+    });
+  });
+
+  // Blog: highlight the section being read in the sidebar contents
+  var tocLinks = $$(".toc-side a[data-toc]");
+  if (tocLinks.length) {
+    var heads = tocLinks.map(function (a) { return document.getElementById(a.getAttribute("data-toc")); }).filter(Boolean);
+    var updateToc = function () {
+      var current = null;
+      heads.forEach(function (h) { if (h.getBoundingClientRect().top < 140) current = h.id; });
+      tocLinks.forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-toc") === current); });
+    };
+    addEventListener("scroll", updateToc, { passive: true });
+    updateToc();
+  }
+
   // Copy email
   var copyBtn = $("#copyEmail");
   if (copyBtn) copyBtn.addEventListener("click", function (e) {
