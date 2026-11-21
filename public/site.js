@@ -243,6 +243,35 @@
   });
   setTimeout(function () { rvs.forEach(function (el) { el.classList.remove("pre"); }); }, 6000);
 
+  // How we work: active step drives the photo on the right
+  var flow = $("#flow");
+  if (flow) {
+    var fSteps = $$(".flow-step", flow), fImgs = $$(".flow-img", flow);
+    var fN = $(".flow-card-n", flow), fT = $(".flow-card-t", flow), fCur = 0, fTimer = null;
+    var setStep = function (i) {
+      fCur = i;
+      fSteps.forEach(function (s, k) { s.classList.toggle("active", k === i); });
+      fImgs.forEach(function (im, k) { im.classList.toggle("active", k === i); });
+      var you = $(".you", fSteps[i]);
+      if (fN) fN.textContent = $(".dot", fSteps[i]).textContent;
+      if (fT && you) fT.textContent = you.textContent;
+    };
+    var stopAuto = function () { if (fTimer) { clearInterval(fTimer); fTimer = null; } };
+    fSteps.forEach(function (s, k) {
+      s.addEventListener("mouseenter", function () { stopAuto(); setStep(k); });
+      s.addEventListener("focus", function () { stopAuto(); setStep(k); });
+      s.addEventListener("click", function () { stopAuto(); setStep(k); });
+    });
+    if (!reduced && "IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (en) {
+          if (en.isIntersecting && !fTimer) fTimer = setInterval(function () { setStep((fCur + 1) % fSteps.length); }, 3800);
+          else if (!en.isIntersecting) stopAuto();
+        });
+      }, { threshold: 0.35 }).observe(flow);
+    }
+  }
+
   // Process line
   var steps = $("#steps");
   if (steps) {
