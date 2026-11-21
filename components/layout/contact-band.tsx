@@ -1,6 +1,8 @@
 
 /* Converted from the reference design (D:\StackNarrative\website\index.html). */
-export default function ContactBand() {
+import Fit from "@/components/home/fit";
+
+export default function ContactBand({ fit = false }: { fit?: boolean }) {
   return (
     <>
 <section className="dark cta-band" id="contact">
@@ -23,6 +25,7 @@ export default function ContactBand() {
       </a>
     </div>
   </div>
+  {fit && <div className="wrap"><Fit embedded /></div>}
 </section>
 
     </>

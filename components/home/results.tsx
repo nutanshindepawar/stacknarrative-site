@@ -1,12 +1,15 @@
 // Results from client work. Numbers are rendered in the HTML (for search engines and no-JS);
 // site.js counts them up when they scroll into view.
-const RESULTS = [
+type Result = { value: number; suffix: string; label: string; text: string; tag: string; extra?: { value: number; suffix: string; label: string }; link?: { href: string; text: string } };
+
+const RESULTS: Result[] = [
   {
     value: 5,
     suffix: "+",
     label: "trade outlets covered our flagship industry trends report",
     text: "Curated HBX Group's Travel Trends Report 2026 end to end. It was cited by a digital PR agency as one of the year's standout industry reports.",
     tag: "Industry report",
+    link: { href: "https://drive.google.com/file/d/1OB-UPmpFPxLT07TgV-j32IcdsXKTCAKG/view?usp=drive_link", text: "View the report" },
   },
   {
     value: 40,
@@ -15,6 +18,7 @@ const RESULTS = [
     text: "With an 11% download rate on the same whitepaper.",
     extra: { value: 11, suffix: "%", label: "download rate" },
     tag: "Whitepaper",
+    link: { href: "https://drive.google.com/file/d/1Mt_Cnvk0qrcuwrVJISTjEpjDjOaGiVhg/view", text: "Read the whitepaper" },
   },
   {
     value: 50,
@@ -52,6 +56,11 @@ export default function Results() {
               </div>
               <h3>{r.label}</h3>
               <p>{r.text}</p>
+              {r.link && (
+                <a className="result-link" href={r.link.href} target="_blank" rel="noopener">
+                  {r.link.text} <span aria-hidden="true">&#8599;</span>
+                </a>
+              )}
             </article>
           ))}
         </div>

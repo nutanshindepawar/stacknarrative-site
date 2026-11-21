@@ -1,3 +1,5 @@
+import Gap from "./gap";
+
 
 /* Converted from the reference design (D:\StackNarrative\website\index.html). */
 export default function Problems() {
@@ -62,6 +64,7 @@ export default function Problems() {
       </div>
       <a className="btn btn-green" href="#contact">Tell us what's slowing you down <span className="arr">&rarr;</span></a>
     </div>
+    <Gap />
   </div>
 </section>
 

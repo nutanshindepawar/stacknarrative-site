@@ -1,16 +1,7 @@
-
-/* Converted from the reference design (D:\StackNarrative\website\index.html). */
-export default function Fit() {
-  return (
-    <>
-
-<section id="fit">
-  <div className="wrap">
-    <div className="head rv">
-      <span className="eyebrow">Who we work with</span>
-      <h2>Are we a fit?</h2>
-      <p className="lead">We're deliberately narrow. That's how we stay good at what we do.</p>
-    </div>
+/* Converted from the reference design (D:\StackNarrative\website\index.html).
+   embedded: rendered inside the homepage contact band (compact, no section of its own). */
+export default function Fit({ embedded = false }: { embedded?: boolean }) {
+  const cols = (
     <div className="fit">
       <div className="fit-col yes rv">
         <h3>We're a strong fit if you…</h3>
@@ -32,9 +23,31 @@ export default function Fit() {
         </ul>
       </div>
     </div>
-  </div>
-</section>
+  );
 
-    </>
+  if (embedded) {
+    return (
+      <div className="fit-embedded" id="fit">
+        <div className="fit-embedded-head rv">
+          <span className="eyebrow">Who we work with</span>
+          <h3>Are we a fit?</h3>
+          <p>We're deliberately narrow. That's how we stay good at what we do.</p>
+        </div>
+        {cols}
+      </div>
+    );
+  }
+
+  return (
+    <section id="fit">
+      <div className="wrap">
+        <div className="head rv">
+          <span className="eyebrow">Who we work with</span>
+          <h2>Are we a fit?</h2>
+          <p className="lead">We're deliberately narrow. That's how we stay good at what we do.</p>
+        </div>
+        {cols}
+      </div>
+    </section>
   );
 }

@@ -4,8 +4,8 @@ export default function Gap() {
   return (
     <>
 
-<section className="sunny">
-  <div className="wrap gap-grid">
+<div className="sunny gap-panel">
+  <div className="gap-grid">
     <div className="rv">
       <span className="eyebrow">The real problem</span>
       <p className="big-quote" style={{marginTop: "22px"}}>B2B tech products rarely lose because of the product. They lose because buyers can't answer <span className="hl">three questions</span> fast enough.</p>
@@ -17,7 +17,7 @@ export default function Gap() {
       <div className="qrow rv"><span className="num">Q3</span><span className="q-ic" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 38h32"/><rect x="11" y="26" width="6" height="12" rx="1.5"/><rect x="21" y="19" width="6" height="19" rx="1.5"/><rect className="g" x="31" y="11" width="6" height="27" rx="1.5"/><path className="g" d="M10 18l9-7 6 4 12-9M33 6h4v4"/></svg></span><span className="q">What do I get?</span><p>The outcome in revenue, time or guest experience, in plain words</p></div>
     </div>
   </div>
-</section>
+</div>
 
     </>
   );
