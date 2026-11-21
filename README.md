@@ -101,7 +101,7 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | toolbook-desk.jpg | https://www.pexels.com/photo/1766604/ (Judit Peter) |
 | blog-window.jpg | https://www.pexels.com/photo/17049747/ (Tran Nhu Tuan) |
 | step-research.jpg | https://www.pexels.com/photo/12663090/ |
-| step-strategy.jpg | https://www.pexels.com/photo/39205254/ |
+| step-strategy.jpg | https://www.pexels.com/photo/7108454/ |
 | step-stage.jpg | https://www.pexels.com/photo/34774347/ |
 | step-lobby.jpg | https://www.pexels.com/photo/10890566/ |
 

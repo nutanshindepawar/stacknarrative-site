@@ -15,7 +15,7 @@ const STEPS = [
     text: "Messaging and a repeatable content plan tied directly to your commercial goals.",
     you: "Your time: review & approve",
     img: "/img/step-strategy.jpg",
-    alt: "Two professionals planning strategy together in a hotel suite",
+    alt: "Marketing team in discussion inside a glass-walled meeting cabin",
   },
   {
     n: "03",
