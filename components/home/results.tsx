@@ -5,7 +5,7 @@ const RESULTS = [
     value: 5,
     suffix: "+",
     label: "trade outlets covered our flagship industry trends report",
-    text: "Curated the Travel Trends Report 2026 end to end. It was cited by a digital PR agency as one of the year's standout industry reports.",
+    text: "Curated HBX Group's Travel Trends Report 2026 end to end. It was cited by a digital PR agency as one of the year's standout industry reports.",
     tag: "Industry report",
   },
   {
