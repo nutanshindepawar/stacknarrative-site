@@ -19,7 +19,7 @@ const RESULTS = [
   {
     value: 50,
     suffix: "+",
-    label: "published assets in 3 months",
+    label: "well-researched, authoritative assets in 3 months",
     text: "Securing first-page Google rankings and AI Overview placements.",
     tag: "SEO + AEO",
   },
