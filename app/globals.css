@@ -15,9 +15,9 @@
   --cream-70:rgba(242,235,229,.74);
   --cream-50:rgba(242,235,229,.52);
   --cream-12:rgba(242,235,229,.12);
-  --display:var(--font-bricolage), "Segoe UI", system-ui, sans-serif;
-  --body:var(--font-figtree), "Segoe UI", system-ui, sans-serif;
-  --mono:var(--font-jetbrains), ui-monospace, Consolas, monospace;
+  --display:var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --body:var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --mono:var(--font-inter), "Segoe UI", system-ui, sans-serif;
   --r:18px;
   --wrap:1180px;
   color-scheme:light;
@@ -911,3 +911,81 @@ header.nav{background:rgba(251,248,245,.86)}
 .pain[aria-pressed="true"]{border-color:var(--green);background:var(--white)}
 .pain[aria-pressed="true"] .pain-ic{background:var(--green)}
 .pain[aria-pressed="true"] p{max-height:160px;opacity:1;margin-top:0}
+
+/* =========================================================================
+   Light & happy pass: Inter everywhere, near-white canvas, no dark blocks.
+   Former dark areas swap ink/cream locally, so their text turns dark and
+   their surfaces turn light; then each gets a bright green or mint surface.
+   ========================================================================= */
+:root{--paper:#FDFCF9;--mint:#EFF6E8}
+body{background:var(--paper)}
+header.nav{background:rgba(253,252,249,.88)}
+@media (max-width:1020px){.nav-links{background:var(--paper)}}
+
+/* Typography: Inter, lighter and more refined headings */
+h1,h2{font-weight:600;letter-spacing:-.035em}
+h1{line-height:1.04}
+h3{font-weight:600;letter-spacing:-.015em}
+.big-quote,.hf-quote,.review blockquote,.hp-to,.side-cta-h,.pain q,.qrow .q{font-weight:600;letter-spacing:-.02em}
+.result .result-num{font-weight:700;letter-spacing:-.045em}
+.eyebrow,.hp-k,.result-tag,.who,.you,.hf-role,.flow-card-t,.k{letter-spacing:.06em}
+
+/* Swap ink and cream inside every formerly dark block */
+.dark,.pain-result,.hp-done,.result:nth-child(1),.side-cta,.quick-answer,.fit-col.yes,.about-card.ink,
+.f-panel.ink,.agent .a-side,.compare .us,.mini.ink,.bo-layer.l1,footer,.side-card.ink,.layer.l4{
+  --ink:#232323;--cream:#232323;
+  --cream-70:rgba(35,35,35,.72);--cream-50:rgba(35,35,35,.55);--cream-12:rgba(35,35,35,.12);
+  color:var(--ink);
+}
+.dark .btn-ghost{border-color:var(--ink);color:var(--ink)}
+.dark .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.dark .btn-primary,.side-cta .btn,.pain-result .btn{color:var(--paper)}
+.dark .eyebrow{color:var(--ink-70)}
+.dark .lead{color:var(--ink-70)}
+.dark .hl{background:linear-gradient(transparent 60%,var(--green) 60%,var(--green) 92%,transparent 92%);color:inherit}
+.dark .mark .k{stroke:var(--ink)}
+.dark .btn-green{background:var(--green);border-color:var(--green);color:var(--ink)}
+
+/* New light surfaces */
+section.dark{background:var(--mint)}
+.dark .svc-tabs{background:var(--white);box-shadow:var(--shadow-sm)}
+.dark .svc-tabs button{color:var(--ink)}
+.dark .svc-list li,.dark .ph,.dark .fcard,.dark .contact-line{background:var(--white);border-color:transparent;box-shadow:var(--shadow-sm)}
+.dark .copy-btn{background:var(--green);color:var(--ink)}
+.cta-band.dark{background:var(--green)}
+.cta-band.dark .eyebrow::before{background:var(--ink)}
+.cta-band.dark .lead{color:rgba(35,35,35,.8)}
+.cta-band .contact-line{background:var(--white)}
+.cta-band .contact-line small{color:var(--ink-50)}
+.pain-result{background:var(--green);box-shadow:var(--shadow-sm)}
+.pain-result .meter i{background:rgba(35,35,35,.14)}
+.pain-result .meter i.on{background:var(--ink)}
+.pain-result .btn-green{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.hp-done{background:var(--green)}
+.hp-done .hp-k{color:var(--ink)}
+.hp-done .hp-k i{background:var(--ink);box-shadow:none;animation:none}
+.hp-from{color:rgba(35,35,35,.75)}
+.hp-from::after{color:var(--ink)}
+.result:nth-child(1){background:var(--mint)}
+.result:nth-child(1) .result-num{color:var(--ink)}
+.result:nth-child(1) .result-tag{background:var(--white);color:var(--ink)}
+.result:nth-child(1) p{color:var(--ink-70)}
+.side-cta{background:var(--green)}
+.side-cta .btn{background:var(--ink);border-color:var(--ink)}
+.side-cta p:not(.side-cta-h){color:rgba(35,35,35,.78)}
+.side-cta-link{color:var(--ink);text-decoration-color:var(--ink)}
+.quick-answer{background:var(--mint);border:2px solid var(--green)}
+.quick-answer .k{color:var(--ink)}
+.fit-col.yes,.about-card.ink,.f-panel.ink,.agent .a-side,.compare .us,.mini.ink,.side-card.ink{background:var(--mint)}
+.bo-layer.l1{background:var(--green);border-color:var(--green)}
+.layer.l4{background:var(--green);border-color:var(--green)}
+footer{background:var(--white);border-top:1px solid var(--ink-12);color:var(--ink-70)}
+footer a{color:var(--ink)}
+
+/* Softer cards: hairline borders + soft shadow instead of heavy ink outlines */
+.compare-wrap,.mini.out,.agent,.trail-wrap,.f-panel,.cform,.cf-done,.bo-layer:not(.l1),.takeaways,.fit-col,.side-card:not(.ink){border-color:var(--ink-12);box-shadow:var(--shadow-sm)}
+.agent,.trail-wrap,.f-panel:not(.ink),.cform,.cf-done,.takeaways,.mini.out,.side-card:not(.ink){background:var(--white)}
+.f-panel.ink{border-color:transparent}
+.article-cover{border-color:var(--ink-12);box-shadow:var(--shadow-sm)}
+.dd-menu::before{border-color:var(--ink-12);box-shadow:var(--shadow)}
+.cform input,.cform select,.cform textarea{background:var(--paper);border-color:var(--ink-12)}
