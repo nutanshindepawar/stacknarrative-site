@@ -1049,3 +1049,29 @@ footer a{color:var(--ink)}
 .sunny .qrow{padding:16px 22px}
 .qrow .q{white-space:nowrap;font-size:1.45rem}
 .big-quote{font-family:var(--display);font-weight:600;letter-spacing:-.035em;line-height:1.08}
+
+/* Services: bright, icon-led, far less text (details stay available as tooltips) */
+section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-25),transparent 70%),var(--white)}
+#services .head .lead,#services .svc-panel .lead{display:none}
+#services .head{margin-bottom:46px}
+.build-row{margin:0 0 50px;gap:16px}
+.build-row div{border-top:0;padding:22px;background:var(--mint);border-radius:22px;gap:10px;align-content:start;transition:transform .3s,background .3s}
+.build-row div:hover{transform:translateY(-4px);background:var(--green)}
+.br-ic{width:50px;height:50px;border-radius:15px;background:var(--white);display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.br-ic svg{width:28px;height:28px;fill:none;stroke:var(--ink);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.build-row b{font-size:1.25rem}
+.build-row span:not(.br-ic){color:var(--ink-70);font-size:.9rem}
+#services .svc-tabs{background:var(--mint);box-shadow:none}
+#services .svc-tabs button{color:var(--ink)}
+#services .svc-tabs button[aria-selected="true"]{background:var(--ink);color:var(--white)}
+#services .svc-panel{grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+#services .svc-panel h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:0}
+#services .svc-panel .btn{margin-top:22px!important}
+#services .svc-list{gap:10px}
+#services .svc-list li{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--ink-12);box-shadow:none;border-radius:14px;padding:13px 16px;cursor:default}
+#services .svc-list li::before{content:"";width:24px;height:24px;flex:none;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.3l2.4 2.4 4.6-5' fill='none' stroke='%23232323' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/12px 12px}
+#services .svc-list li:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+#services .svc-list b{font-family:var(--body);font-weight:600;font-size:.98rem}
+#services .svc-list span{display:none}
+@media (max-width:900px){.build-row{grid-template-columns:1fr 1fr}#services .svc-panel{grid-template-columns:1fr}}
+@media (max-width:480px){#services .svc-list{grid-template-columns:1fr}}
