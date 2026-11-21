@@ -898,3 +898,16 @@ header.nav{background:rgba(251,248,245,.86)}
   .flow-step p,.flow-step .you{max-height:none;opacity:1}
   .flow-steps::before{left:47px}
 }
+
+/* Pain checker: icon + role + quote; the longer explanation opens only when a card is ticked */
+.pain{background:var(--white);border-color:transparent;box-shadow:var(--shadow-sm);gap:12px;align-content:start;padding:24px 24px 22px}
+.pain:hover{border-color:var(--ink-12);box-shadow:var(--shadow)}
+.pain-ic{width:58px;height:58px;border-radius:18px;background:var(--green-25);display:grid;place-items:center;transition:background .3s,transform .3s}
+.pain-ic svg{width:34px;height:34px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.pain-ic svg .g{stroke:var(--ink)}
+.pain:hover .pain-ic{transform:rotate(-4deg) scale(1.04)}
+.pain q{font-size:1.18rem}
+.pain p{max-height:0;opacity:0;overflow:hidden;margin-top:-12px;transition:max-height .45s ease,opacity .3s ease,margin .3s ease}
+.pain[aria-pressed="true"]{border-color:var(--green);background:var(--white)}
+.pain[aria-pressed="true"] .pain-ic{background:var(--green)}
+.pain[aria-pressed="true"] p{max-height:160px;opacity:1;margin-top:0}
