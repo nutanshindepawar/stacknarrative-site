@@ -5,15 +5,21 @@ export default function About() {
     <>
 <div id="view-about">
   <section className="page-hero">
-    <div className="wrap">
+    <div className="wrap ph-grid">
+      <div className="ph-copy">
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>About StackNarrative</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>We help great B2B tech products become easy to <span className="hl">understand, trust and buy.</span></h1>
       <p className="lead">We work with B2B tech companies, specialising in travel and hotel tech.</p>
     </div>
+      <figure className="ph-photo rv">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img style={{"--pos": "50% 20%"} as React.CSSProperties} src="/img/founder-nutan.jpg" alt="Nutan Pawar, founder of StackNarrative" width={900} height={1125} />
+      </figure>
+    </div>
   </section>
 
-  <section className="dark">
+  <section className="sunny">
     <div className="wrap gap-grid">
       <div>
         <span className="eyebrow">Why we exist</span>
@@ -41,7 +47,7 @@ export default function About() {
     <div className="wrap">
       <div className="f-head">
         <div className="f-id">
-          <div className="f-mono" aria-hidden="true"><span className="b1"></span><span className="b2"></span><span className="b3">NP</span></div>
+          <div className="f-photo">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/img/founder-nutan.jpg" alt="" width={900} height={1125} loading="lazy" /></div>
           <div>
             <span className="eyebrow">The founder</span>
             <h2 style={{marginTop: "10px"}}>Nutan Pawar</h2>

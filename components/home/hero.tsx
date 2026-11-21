@@ -20,12 +20,22 @@ export default function Hero() {
       </div>
       <p className="hero-note">Built for B2B tech teams, especially in travel and hotel tech, that already have product-market fit and a sales team to feed.</p>
     </div>
-    <div className="hero-visual" aria-label="The StackNarrative content stack: market intelligence, positioning, content, AI content operations">
-      <div className="layer l1"><div className="t"><span className="n">01</span>Market intelligence</div></div>
-      <div className="layer l2"><div className="t"><span className="n">02</span>Positioning &amp; strategy</div></div>
-      <div className="layer l3"><div className="t"><span className="n">03</span>Thought leadership &amp; messaging</div></div>
-      <div className="layer l4"><div className="t"><span className="n">04</span>AI content operations</div></div>
-      <span className="tag">one engine, four layers</span>
+    <div className="hero-photo" aria-label="A busy week for a B2B marketing team, and how StackNarrative takes it off their plate">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="hp-img" src="/img/hero-marketer.jpg" alt="Smiling marketing professional at her desk with a tablet" width={1000} height={1500} fetchPriority="high" />
+      <div className="hp-card hp-todo">
+        <span className="hp-k">This week</span>
+        <ul>
+          <li>Launch blog due Friday</li>
+          <li>Founder too busy to brief anyone</li>
+          <li>Sales needs a one-pager for a hotel group</li>
+        </ul>
+      </div>
+      <div className="hp-card hp-done">
+        <span className="hp-k"><i aria-hidden="true"></i>With StackNarrative</span>
+        <p className="hp-from">One short call with your founder</p>
+        <p className="hp-to">Blog, LinkedIn posts and one-pager, ready for your review</p>
+      </div>
     </div>
   </div>
 </section>

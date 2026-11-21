@@ -9,11 +9,17 @@ export default function Blog({ posts }: { posts: PostCard[] }) {
     <>
 <div id="view-blog">
   <section className="page-hero">
-    <div className="wrap">
+    <div className="wrap ph-grid">
+      <div className="ph-copy">
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>Blog</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>Clear thinking for B2B tech marketers.</h1>
       <p className="lead">Structured thinking on positioning, systems and market clarity. Four new posts every month.</p>
+    </div>
+      <figure className="ph-photo rv">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img style={{"--pos": "50% 30%"} as React.CSSProperties} src="/img/blog-window.jpg" alt="Smiling woman reading by a bright window" width={1000} height={1500} />
+      </figure>
     </div>
   </section>
   <section style={{paddingTop: "10px"}}>

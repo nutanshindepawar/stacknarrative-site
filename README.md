@@ -87,3 +87,20 @@ Setup:
 5. Put the URL in `FORM_ENDPOINT` in `lib/site.ts` (or set `NEXT_PUBLIC_FORM_ENDPOINT`, which overrides it).
 
 After you edit the script: go to **Deploy > Manage deployments**, click the pencil icon, choose **Version: New version**, and click **Deploy**. The URL stays the same.
+
+## Photos
+
+Stock photos in `public/img/` are from Pexels (free to use, no attribution required):
+
+| File | Pexels photo |
+|---|---|
+| hero-marketer.jpg | https://www.pexels.com/photo/17489837/ |
+| why-team.jpg | https://www.pexels.com/photo/7698912/ (Yan Krukau) |
+| contact-call.jpg | https://www.pexels.com/photo/5956819/ (Katrin Bolovtsova) |
+| agents-laptop.jpg | https://www.pexels.com/photo/39506543/ (quang vinh) |
+| toolbook-desk.jpg | https://www.pexels.com/photo/1766604/ (Judit Peter) |
+| blog-window.jpg | https://www.pexels.com/photo/17049747/ (Tran Nhu Tuan) |
+
+`founder-nutan.jpg` is Nutan's own photo.
+
+Client reviews live in `components/home/reviews.tsx` (`REVIEWS`). The section stays hidden until it has at least one real review.

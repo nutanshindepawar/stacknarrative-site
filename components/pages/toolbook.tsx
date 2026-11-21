@@ -8,7 +8,8 @@ export default function Toolbook({ phases, entries }: { phases: Phase[]; entries
     <>
 <div id="view-toolbook">
   <section className="page-hero">
-    <div className="wrap">
+    <div className="wrap ph-grid">
+      <div className="ph-copy">
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>AI Content Ops Toolbook</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>The B2B AI content operations guide.</h1>
@@ -17,6 +18,11 @@ export default function Toolbook({ phases, entries }: { phases: Phase[]; entries
         <a className="btn btn-primary" href="https://stacknarrative.com/AI-content-ops-guide" target="_blank" rel="noopener">Open the full guide <span className="arr">&#8599;</span></a>
         <a className="btn btn-ghost" href="https://stacknarrative.com/AI-content-ops-guide/contribute" target="_blank" rel="noopener">Contribute an automation</a>
       </div>
+    </div>
+      <figure className="ph-photo rv">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/toolbook-desk.jpg" alt="Notebook, laptop and coffee on a desk, ready to plan content" width={1000} height={669} />
+      </figure>
     </div>
   </section>
   <section style={{paddingTop: "10px"}}>

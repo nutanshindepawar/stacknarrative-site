@@ -7,11 +7,17 @@ export default function Contact() {
     <>
 <div id="view-contact-us">
   <section className="page-hero" style={{paddingBottom: "30px"}}>
-    <div className="wrap">
+    <div className="wrap ph-grid">
+      <div className="ph-copy">
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>Contact us</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>Tell us where content is slowing you down.</h1>
       <p className="lead">Two minutes. We read every message and reply personally, and we'll tell you honestly whether we're the right fit.</p>
+    </div>
+      <figure className="ph-photo rv">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img style={{"--pos": "50% 78%"} as React.CSSProperties} src="/img/contact-call.jpg" alt="Smiling professional waving on a video call" width={1000} height={1500} />
+      </figure>
     </div>
   </section>
   <section style={{paddingTop: "10px"}}>

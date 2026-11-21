@@ -177,6 +177,27 @@
     });
   }
 
+  // Results: count numbers up when they scroll into view (the final number is already in the HTML)
+  var counters = $$("[data-count]");
+  if (counters.length && !reduced && "IntersectionObserver" in window) {
+    var countIO = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        countIO.unobserve(en.target);
+        var el = en.target, end = +el.getAttribute("data-count"), t0 = null, dur = 1200;
+        var step = function (t) {
+          if (!t0) t0 = t;
+          var p = Math.min(1, (t - t0) / dur);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step); else el.textContent = end;
+        };
+        el.textContent = "0";
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { if (c.getBoundingClientRect().top > innerHeight) countIO.observe(c); });
+  }
+
   // Blog: copy post link
   $$("[data-copy-link]").forEach(function (b) {
     b.addEventListener("click", function () {

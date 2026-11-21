@@ -8,11 +8,17 @@ export default function Agents({ agents }: { agents: Agent[] }) {
     <>
 <div id="view-agents">
   <section className="page-hero">
-    <div className="wrap">
+    <div className="wrap ph-grid">
+      <div className="ph-copy">
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>AI Agents</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>AI agents for B2B tech content teams.</h1>
       <p className="lead">Each agent takes on one specific content-ops job, built on the same workflows we use with clients.</p>
+    </div>
+      <figure className="ph-photo rv">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/agents-laptop.jpg" alt="Professional working with AI tools on a laptop in a bright office" width={1000} height={667} />
+      </figure>
     </div>
   </section>
   <section style={{paddingTop: "10px"}}>

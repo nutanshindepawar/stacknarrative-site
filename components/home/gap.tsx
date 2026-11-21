@@ -4,7 +4,7 @@ export default function Gap() {
   return (
     <>
 
-<section className="dark">
+<section className="sunny">
   <div className="wrap gap-grid">
     <div className="rv">
       <span className="eyebrow">The real problem</span>

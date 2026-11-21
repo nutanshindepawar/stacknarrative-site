@@ -6,6 +6,9 @@ import Process from "@/components/home/process";
 import Services from "@/components/home/services";
 import Why from "@/components/home/why";
 import Work from "@/components/home/work";
+import Results from "@/components/home/results";
+import Reviews from "@/components/home/reviews";
+import Founder from "@/components/home/founder";
 import ToolbookBand from "@/components/home/toolbook-band";
 import Fit from "@/components/home/fit";
 import Teasers from "@/components/home/teasers";
@@ -17,6 +20,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <Results />
       <Problems />
       <Gap />
       <Outcomes />
@@ -24,6 +28,8 @@ export default async function Home() {
       <Services />
       <Why />
       <Work cases={cases} />
+      <Reviews />
+      <Founder />
       <ToolbookBand phases={phases} entries={entries} />
       <Fit />
       <Teasers latest={posts[0]} agents={agents} />
