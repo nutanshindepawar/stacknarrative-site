@@ -100,6 +100,10 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | agents-laptop.jpg | https://www.pexels.com/photo/39506543/ (quang vinh) |
 | toolbook-desk.jpg | https://www.pexels.com/photo/1766604/ (Judit Peter) |
 | blog-window.jpg | https://www.pexels.com/photo/17049747/ (Tran Nhu Tuan) |
+| step-research.jpg | https://www.pexels.com/photo/12663090/ |
+| step-strategy.jpg | https://www.pexels.com/photo/39205254/ |
+| step-conversation.jpg | https://www.pexels.com/photo/5378703/ |
+| step-lobby.jpg | https://www.pexels.com/photo/10890566/ |
 
 `founder-nutan.jpg` is Nutan's own photo.
 
