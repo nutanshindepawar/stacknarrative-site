@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
       <div className="hp-card hp-done">
         <span className="hp-k"><i aria-hidden="true"></i>With StackNarrative</span>
-        <p className="hp-from">One short call with your founder</p>
+        <p className="hp-from">One short call</p>
         <p className="hp-to">Blog, LinkedIn posts and one-pager, ready for your review</p>
       </div>
     </div>
