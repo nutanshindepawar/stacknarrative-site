@@ -8,7 +8,6 @@ export default function Founder() {
         <figure className="hf-photo rv">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/img/founder-nutan.jpg" alt="Nutan Pawar, founder of StackNarrative" width={900} height={1125} loading="lazy" />
-          <span className="hf-badge"><i aria-hidden="true"></i>Hi, I&rsquo;m Nutan</span>
         </figure>
         <div className="hf-copy rv">
           <span className="eyebrow">The founder</span>
