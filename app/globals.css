@@ -1048,3 +1048,4 @@ footer a{color:var(--ink)}
 .qrow:hover .q-ic{background:var(--green);transform:rotate(-5deg) scale(1.05)}
 .sunny .qrow{padding:16px 22px}
 .qrow .q{white-space:nowrap;font-size:1.45rem}
+.big-quote{font-family:var(--display);font-weight:600;letter-spacing:-.035em;line-height:1.08}
