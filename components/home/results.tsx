@@ -35,7 +35,7 @@ export default function Results() {
       <div className="wrap">
         <div className="results-head rv">
           <span className="eyebrow">Results</span>
-          <h2 id="results-h">Content that ships, ranks, gets read and makes you grow.</h2>
+          <h2 id="results-h">Content that ranks, gets read and makes you grow.</h2>
         </div>
         <div className="results-grid">
           {RESULTS.map((r) => (
