@@ -15,7 +15,7 @@ export default function Why() {
       <figure className="why-photo rv">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/why-team.jpg" alt="A team discussing strategy around a table in a meeting room" width={1200} height={800} loading="lazy" />
-        <figcaption><span className="wp-dot" aria-hidden="true"></span>One industry. One team. Strategy and writing together.</figcaption>
+        <figcaption><span className="wp-dot" aria-hidden="true"></span>We work with your team. Strategy and writing together.</figcaption>
       </figure>
       <ol className="why-steps">
       <li className="why-step rv"><span className="ws-n">01</span>
