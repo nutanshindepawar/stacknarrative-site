@@ -58,11 +58,12 @@
   var painMsgs = [
     ["Tick any card above.", "Each one maps to something we fix. Pick what sounds familiar."],
     ["One is enough to start.", "That one problem usually has a positioning root. We'd start there."],
-    ["Two of six. You're not alone.", "These usually come together: unclear positioning shows up as weak content."],
-    ["Three of six. We hear this a lot.", "This is exactly the gap a content engine closes. Let's talk about where to start."],
-    ["Four of six. That's a system problem.", "More writers won't fix it. Positioning plus AI content ops will."],
-    ["Five of six. We should talk.", "You need strategy and execution working as one engine, without adding headcount."],
-    ["All six. You've just described why we exist.", "B2B tech specialists in travel and hotel tech. Positioning first, AI-powered ops. Let's talk."]
+    ["Two of seven. You're not alone.", "These usually come together: unclear positioning shows up as weak content."],
+    ["Three of seven. We hear this a lot.", "This is exactly the gap a content engine closes. Let's talk about where to start."],
+    ["Four of seven. That's a system problem.", "More writers won't fix it. Positioning plus AI content ops will."],
+    ["Five of seven. We should talk.", "You need strategy and execution working as one engine, without adding headcount."],
+    ["Six of seven. Let’s fix this together.", "Positioning, content and sales enablement need to work as one engine. That is what we build."],
+    ["All seven. You've just described why we exist.", "B2B tech specialists in travel and hotel tech. Positioning first, AI-powered ops. Let's talk."]
   ];
   var meterBars = $$("#painMeter i");
   painCards.forEach(function (c) {

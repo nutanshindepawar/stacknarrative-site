@@ -1127,3 +1127,9 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
   .hv-flow{display:none}
   .hv-badge{left:-4px;font-size:.8rem}
 }
+
+/* Pain checker: the 7th card spans the full row */
+.pain-wide{grid-column:1/-1;grid-template-columns:auto 1fr;column-gap:20px;align-items:center}
+.pain-wide .pain-ic{grid-row:1 / span 4;grid-column:1;align-self:start}
+.pain-wide .who,.pain-wide q,.pain-wide p{grid-column:2}
+@media (max-width:600px){.pain-wide{grid-template-columns:1fr}.pain-wide .pain-ic,.pain-wide .who,.pain-wide q,.pain-wide p{grid-column:auto;grid-row:auto}}
