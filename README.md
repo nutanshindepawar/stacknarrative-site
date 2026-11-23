@@ -99,7 +99,7 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | contact-call.jpg | https://www.pexels.com/photo/5956819/ (Katrin Bolovtsova) |
 | agents-laptop.jpg | https://www.pexels.com/photo/39506543/ (quang vinh) |
 | toolbook-desk.jpg | https://www.pexels.com/photo/1766604/ (Judit Peter) |
-| blog-window.jpg | https://www.pexels.com/photo/17049747/ (Tran Nhu Tuan) |
+| blog-planning.jpg | https://www.pexels.com/photo/7710074/ |
 | step-research.jpg | https://www.pexels.com/photo/12663090/ |
 | step-strategy.jpg | https://www.pexels.com/photo/7108454/ |
 | step-stage.jpg | https://www.pexels.com/photo/6949925/ |

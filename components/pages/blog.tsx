@@ -18,7 +18,7 @@ export default function Blog({ posts }: { posts: PostCard[] }) {
     </div>
       <figure className="ph-photo rv">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img style={{"--pos": "50% 30%"} as React.CSSProperties} src="/img/blog-window.jpg" alt="Smiling woman reading by a bright window" width={1000} height={1500} />
+        <img style={{"--pos": "74% 50%"} as React.CSSProperties} src="/img/blog-planning.jpg" alt="Two marketers planning strategy with sticky notes on a board marked Marketing" width={1200} height={800} />
       </figure>
     </div>
   </section>
