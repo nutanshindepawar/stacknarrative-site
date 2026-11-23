@@ -95,7 +95,7 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | File | Pexels photo |
 |---|---|
 | hero-marketer.jpg | https://www.pexels.com/photo/17489837/ |
-| why-team.jpg | https://www.pexels.com/photo/7698912/ (Yan Krukau) |
+| why-team.jpg | https://www.pexels.com/photo/7710141/ |
 | contact-call.jpg | https://www.pexels.com/photo/5956819/ (Katrin Bolovtsova) |
 | agents-laptop.jpg | https://www.pexels.com/photo/39506543/ (quang vinh) |
 | toolbook-desk.jpg | https://www.pexels.com/photo/1766604/ (Judit Peter) |
