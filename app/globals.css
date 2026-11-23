@@ -1118,3 +1118,7 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
   .ba-say{font-size:.86rem}
   .ba-q,.ba-yes{font-size:.8rem}
 }
+/* Before card: stays fully visible (no fade or dim), grey shade */
+.ba-before{background:#ECEAE6}
+.ba-before .ba-say{color:var(--ink-70)}
+@media (prefers-reduced-motion:no-preference){.ba-before{animation:cardIn .6s .2s both}}

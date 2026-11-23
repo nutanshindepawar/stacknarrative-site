@@ -22,13 +22,13 @@ export default function Hero() {
     </div>
     {/* Hero visual (before / after): the buyer hears product-speak and is lost; after StackNarrative they hear the value and want to talk.
         The example lines are generic illustrations, not quotes from a client. */}
-    <div className="hero-photo" role="img" aria-label="Before: a buyer hears a list of features and asks what it does for them. After StackNarrative: the buyer hears the value in plain words and says: I get it, let's talk.">
+    <div className="hero-photo" role="img" aria-label="Before: a list of features, and your buyer is confused by your messaging. After StackNarrative: the buyer hears the value in plain words and says: I get it, let's talk.">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="hp-img" src="/img/hero-marketer.jpg" alt="" width={1000} height={1500} fetchPriority="high" />
       <div className="ba-card ba-before" aria-hidden="true">
         <span className="ba-k"><i className="ba-dot"></i>Before</span>
         <p className="ba-say">&ldquo;Real-time 2-way sync, 40+ integrations, open API&hellip;&rdquo;</p>
-        <p className="ba-q"><span className="ba-qm">?</span>So what does it do for me?</p>
+        <p className="ba-q"><span className="ba-qm">?</span>Your buyer is confused by your messaging.</p>
       </div>
       <div className="ba-card ba-after" aria-hidden="true">
         <span className="ba-k"><i className="ba-dot"></i>After StackNarrative</span>
