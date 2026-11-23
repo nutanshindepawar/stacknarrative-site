@@ -33,7 +33,7 @@ export default function Reviews({ embedded = false }: { embedded?: boolean }) {
     <>
       <div className="head rv">
         <span className="eyebrow">Client reviews</span>
-        <h2 id="reviews-h">Built with the people who know the market best.</h2>
+        <h2 id="reviews-h">What our clients say about us.</h2>
       </div>
       <div className="reviews-grid">
         {list.map((r, i) => (
