@@ -42,7 +42,6 @@ export const DEFAULT_CASES: ClientCase[] = [
       { label: "Why More Hotels Are Choosing HBX Group as Their Distribution Partner", url: "https://www.hbxgroup.com/resources/articles/how-boost-hotel-revenue" },
       { label: "Generative AI in Hotel Marketing: How to Use it for Smarter Hospitality", url: "https://www.hbxgroup.com/resources/articles/generative-ai-hotel-marketing" },
       { label: "Hotel Segmentation", url: "https://www.hbxgroup.com/resources/articles/hotel-segmentation" },
-      { label: "How to Attract Gen Z Travellers to Hotels", url: "https://www.hbxgroup.com/resources/articles/how-attract-gen-z-travellers-hotels" },
     ],
     order: 1,
   },
