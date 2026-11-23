@@ -1069,64 +1069,6 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 .cta-band .fit-col.no{border-color:rgba(35,35,35,.35)}
 .cta-band .fit-col.no li{color:rgba(35,35,35,.75)}
 
-/* =========================================================================
-   Hero visual: built on strategy + expertise -> buyer's questions answered -> buyer sees the value
-   (cards sit on the edges so the face stays clear)
-   ========================================================================= */
-.hv-in,.hv-buyer{position:absolute;z-index:2;background:var(--white);border-radius:18px;box-shadow:var(--shadow);padding:14px 16px}
-.hv-h{display:flex;align-items:center;gap:8px;font:600 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50);margin-bottom:10px}
-.hv-in ul,.hv-buyer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.hv-in li,.hv-buyer li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.9rem;white-space:nowrap}
-.hv-in{left:-48px;top:-28px}
-.hv-ic{width:28px;height:28px;border-radius:9px;background:var(--mint);display:grid;place-items:center;flex:none}
-.hv-ic svg,.hv-av svg{width:16px;height:16px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.hv-buyer{right:-66px;top:36%;min-width:200px}
-.hv-av{width:22px;height:22px;border-radius:50%;background:var(--green-25);display:grid;place-items:center}
-.hv-av svg{width:13px;height:13px}
-.hv-buyer li{padding:7px 10px 7px 7px;border-radius:12px;background:var(--paper);transition:background .3s}
-.hv-mark{position:relative;width:24px;height:24px;flex:none}
-.hv-mark b,.hv-ok{position:absolute;inset:0;border-radius:50%;display:grid;place-items:center}
-.hv-mark b{background:var(--ink-06,rgba(35,35,35,.07));color:var(--ink-50);font-size:.8rem;font-weight:700}
-.hv-ok{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.3l2.4 2.4 4.6-5' fill='none' stroke='%23232323' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/12px 12px;transform:scale(0)}
-.hv-badge{position:absolute;left:-24px;bottom:-20px;z-index:2;background:var(--green);border-radius:999px;padding:11px 18px;font-weight:600;font-size:.9rem;display:flex;gap:8px;align-items:center;box-shadow:var(--shadow)}
-.hv-badge i{width:8px;height:8px;border-radius:50%;background:var(--ink)}
-.hv-flow{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible;pointer-events:none}
-.hv-flow path{fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:3 7;vector-effect:non-scaling-stroke;filter:drop-shadow(0 1px 2px rgba(35,35,35,.35))}
-.hv-mark b{transform:scale(1)}
-@media (prefers-reduced-motion:no-preference){
-  .hv-in{animation:cardIn .6s .2s both}
-  .hv-in li{animation:cardIn .5s both}
-  .hv-in li:nth-child(1){animation-delay:.45s}.hv-in li:nth-child(2){animation-delay:.65s}.hv-in li:nth-child(3){animation-delay:.85s}
-  .hv-flow path{animation:hvFlow 1.2s linear infinite}
-  .hv-buyer{animation:cardIn .6s 1s both}
-  /* 9s loop: each question flips from "?" to a tick, then the badge lands */
-  .hv-buyer li{animation:hvRow 9s infinite both}
-  .hv-mark b{animation:hvQ 9s infinite both}
-  .hv-ok{animation:hvOk 9s infinite both}
-  .hv-buyer li:nth-child(1),.hv-buyer li:nth-child(1) .hv-mark b,.hv-buyer li:nth-child(1) .hv-ok{animation-delay:1.8s}
-  .hv-buyer li:nth-child(2),.hv-buyer li:nth-child(2) .hv-mark b,.hv-buyer li:nth-child(2) .hv-ok{animation-delay:2.5s}
-  .hv-buyer li:nth-child(3),.hv-buyer li:nth-child(3) .hv-mark b,.hv-buyer li:nth-child(3) .hv-ok{animation-delay:3.2s}
-  .hv-badge{animation:hvBadge 9s 3.6s infinite both}
-}
-@media (prefers-reduced-motion:reduce){.hv-mark b{transform:scale(0)}.hv-ok{transform:scale(1)}.hv-buyer li{background:var(--mint)}}
-@keyframes hvFlow{to{stroke-dashoffset:-20}}
-@keyframes hvQ{0%,6%{transform:scale(1)}10%,88%{transform:scale(0)}94%,100%{transform:scale(1)}}
-@keyframes hvOk{0%,7%{transform:scale(0)}12%,88%{transform:scale(1)}93%,100%{transform:scale(0)}}
-@keyframes hvRow{0%,7%{background:var(--paper)}12%,88%{background:var(--mint)}93%,100%{background:var(--paper)}}
-@keyframes hvBadge{0%{opacity:0;transform:translateY(10px) scale(.94)}6%,80%{opacity:1;transform:none}88%,100%{opacity:0;transform:translateY(6px)}}
-@media (max-width:1100px){.hv-in{left:-22px}.hv-buyer{right:-30px}}
-@media (max-width:900px){.hv-in{left:-12px}.hv-buyer{right:-12px}.hv-badge{left:-8px}}
-@media (max-width:480px){
-  .hero-photo{margin-bottom:150px}
-  .hv-in{left:-6px;top:-18px;padding:10px 12px}
-  .hv-in li{font-size:.8rem}
-  .hv-ic{width:24px;height:24px}
-  .hv-buyer{top:calc(100% + 44px);left:0;right:0;min-width:0}
-  .hv-buyer ul{grid-template-columns:1fr 1fr 1fr;gap:6px}
-  .hv-buyer li{flex-direction:column;gap:6px;white-space:normal;text-align:center;font-size:.78rem;line-height:1.2;padding:8px 4px}
-  .hv-flow{display:none}
-  .hv-badge{left:-4px;font-size:.8rem}
-}
 
 /* Pain checker: the 7th card spans the full row */
 .pain-wide{grid-column:1/-1;grid-template-columns:auto 1fr;column-gap:20px;align-items:center}
@@ -1137,3 +1079,42 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 /* Reviews: keep the first line clear of the big quote mark */
 .review blockquote{padding-right:48px}
 .res-card p{align-self:start}
+
+/* =========================================================================
+   Hero visual, before / after: product-speak confuses the buyer; value-speak lands.
+   Cards sit on the photo edges so the face stays clear. 10s loop.
+   ========================================================================= */
+.ba-card{position:absolute;z-index:2;width:236px;border-radius:18px;padding:14px 16px;display:grid;gap:8px;box-shadow:var(--shadow)}
+.ba-before{left:-52px;top:-26px;background:var(--white)}
+.ba-after{right:-66px;top:44%;background:var(--green)}
+.ba-k{display:flex;align-items:center;gap:7px;font:600 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50)}
+.ba-after .ba-k{color:rgba(35,35,35,.72)}
+.ba-dot{width:7px;height:7px;border-radius:50%;background:var(--ink-50)}
+.ba-after .ba-dot{background:var(--ink)}
+.ba-say{margin:0;font-weight:600;font-size:.95rem;line-height:1.35;letter-spacing:-.01em}
+.ba-before .ba-say{color:var(--ink-70)}
+.ba-q,.ba-yes{margin:0;display:flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600}
+.ba-q{color:#B4472E}
+.ba-qm{width:22px;height:22px;flex:none;border-radius:50%;background:#FBE3DC;color:#B4472E;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.ba-yes{background:var(--white);border-radius:12px;padding:8px 10px}
+.ba-ok{width:22px;height:22px;flex:none;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.3l2.4 2.4 4.6-5' fill='none' stroke='%239BC86F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/12px 12px}
+@media (prefers-reduced-motion:no-preference){
+  .ba-before{animation:baBefore 10s .2s infinite both}
+  .ba-qm{animation:baWobble 10s .2s infinite both}
+  .ba-after{animation:baAfter 10s .2s infinite both}
+  .ba-ok{animation:baPop 10s .2s infinite both}
+}
+@keyframes baBefore{0%{opacity:0;transform:translateY(12px)}5%,26%{opacity:1;transform:none}32%,88%{opacity:.55;transform:scale(.97)}94%,100%{opacity:0;transform:translateY(-6px)}}
+@keyframes baWobble{0%,8%{transform:none}10%{transform:rotate(-14deg)}12%{transform:rotate(12deg)}14%{transform:rotate(-8deg)}16%,100%{transform:none}}
+@keyframes baAfter{0%,26%{opacity:0;transform:translateX(24px) scale(.94)}33%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:translateX(10px)}}
+@keyframes baPop{0%,36%{transform:scale(0)}41%,88%{transform:scale(1)}93%,100%{transform:scale(0)}}
+@media (max-width:1100px){.ba-before{left:-24px}.ba-after{right:-30px}}
+@media (max-width:900px){.ba-before{left:-12px}.ba-after{right:-12px}}
+@media (max-width:480px){
+  .hero-photo{margin-bottom:24px}
+  .ba-card{width:200px;padding:11px 12px;gap:6px}
+  .ba-before{left:-6px;top:-18px}
+  .ba-after{right:-6px;top:auto;bottom:-18px}
+  .ba-say{font-size:.86rem}
+  .ba-q,.ba-yes{font-size:.8rem}
+}

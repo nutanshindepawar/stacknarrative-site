@@ -20,30 +20,21 @@ export default function Hero() {
       </div>
       <p className="hero-note">Built for B2B tech teams, especially in travel and hotel tech, that already have product-market fit and a sales team to feed.</p>
     </div>
-    {/* Hero visual: what the content is built on -> the buyer's three questions get answered -> the buyer sees the value. */}
-    <div className="hero-photo" role="img" aria-label="Content built on strategic analysis, founder expertise and team knowledge answers your buyer's questions: why this, why now and what do I get. The buyer sees the value and buys.">
+    {/* Hero visual (before / after): the buyer hears product-speak and is lost; after StackNarrative they hear the value and want to talk.
+        The example lines are generic illustrations, not quotes from a client. */}
+    <div className="hero-photo" role="img" aria-label="Before: a buyer hears a list of features and asks what it does for them. After StackNarrative: the buyer hears the value in plain words and says: I get it, let's talk.">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="hp-img" src="/img/hero-marketer.jpg" alt="" width={1000} height={1500} fetchPriority="high" />
-      <svg className="hv-flow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M18 24 C 44 22, 70 22, 84 36" />
-      </svg>
-      <div className="hv-in" aria-hidden="true">
-        <span className="hv-h">Built on</span>
-        <ul>
-          <li><span className="hv-ic"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" /><path d="M15 15l5 5M8 12V10M10.5 12V8.5M13 12v-1.5" /></svg></span>Strategic market analysis</li>
-          <li><span className="hv-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4.5 20a7.5 7.5 0 0 1 15 0" /><path d="M17.5 3.5l1 1.8 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2-1.5-1.4 2-.3z" /></svg></span>Founder expertise</li>
-          <li><span className="hv-ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3" /><circle cx="16" cy="9" r="3" /><path d="M2.5 19a5.5 5.5 0 0 1 11 0M10.5 19a5.5 5.5 0 0 1 11 0" /></svg></span>Team knowledge</li>
-        </ul>
+      <div className="ba-card ba-before" aria-hidden="true">
+        <span className="ba-k"><i className="ba-dot"></i>Before</span>
+        <p className="ba-say">&ldquo;Real-time 2-way sync, 40+ integrations, open API&hellip;&rdquo;</p>
+        <p className="ba-q"><span className="ba-qm">?</span>So what does it do for me?</p>
       </div>
-      <div className="hv-buyer" aria-hidden="true">
-        <span className="hv-h"><span className="hv-av"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4" /><path d="M4.5 21a7.5 7.5 0 0 1 15 0" /></svg></span>Your buyer asks</span>
-        <ul>
-          <li><span className="hv-mark"><b>?</b><i className="hv-ok"></i></span>Why this?</li>
-          <li><span className="hv-mark"><b>?</b><i className="hv-ok"></i></span>Why now?</li>
-          <li><span className="hv-mark"><b>?</b><i className="hv-ok"></i></span>What do I get?</li>
-        </ul>
+      <div className="ba-card ba-after" aria-hidden="true">
+        <span className="ba-k"><i className="ba-dot"></i>After StackNarrative</span>
+        <p className="ba-say">&ldquo;Fewer manual updates. More time for your guests.&rdquo;</p>
+        <p className="ba-yes"><span className="ba-ok"></span>I get it. Let&rsquo;s talk.</p>
       </div>
-      <div className="hv-badge" aria-hidden="true"><i></i>Buyer sees the value and buys</div>
     </div>
   </div>
 </section>
