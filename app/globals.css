@@ -1133,3 +1133,6 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 .pain-wide .pain-ic{grid-row:1 / span 4;grid-column:1;align-self:start}
 .pain-wide .who,.pain-wide q,.pain-wide p{grid-column:2}
 @media (max-width:600px){.pain-wide{grid-template-columns:1fr}.pain-wide .pain-ic,.pain-wide .who,.pain-wide q,.pain-wide p{grid-column:auto;grid-row:auto}}
+
+/* Reviews: keep the first line clear of the big quote mark */
+.review blockquote{padding-right:48px}

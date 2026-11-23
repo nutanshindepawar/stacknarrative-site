@@ -2,7 +2,23 @@
 // SN_DEMO=1 (demo builds only) shows clearly labelled placeholders so the layout can be reviewed.
 type Review = { quote: string; name: string; role: string; company: string };
 
-const REVIEWS: Review[] = [];
+// Verbatim excerpts from LinkedIn recommendations (trimmed only, no words changed).
+const REVIEWS: Review[] = [
+  {
+    quote:
+      "Her support has been invaluable: from our annual Trend Report to client case studies/success stories and more consultative resources for our hotelier partners, Nutan has aided my team in producing strong copy across numerous formats and, at times, rather niche subject matter, helping us to increase our output and brand awareness.",
+    name: "Leanne Sturrock",
+    role: "Content Marketing Manager",
+    company: "HBX Group",
+  },
+  {
+    quote:
+      "We've worked with Nutan on a number of projects and have been very pleased with what she's provided and her ease of writing on a variety of topics.",
+    name: "Tiphaine Lazard",
+    role: "Marketing Manager",
+    company: "EP Climbing",
+  },
+];
 
 const DEMO: Review[] = [
   { quote: "Placeholder: review 1 goes here, word for word as the client wrote it.", name: "Reviewer name", role: "Role", company: "Company" },
