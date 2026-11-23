@@ -36,10 +36,10 @@ export default function Problems() {
       </button>
       <button className="pain rv" aria-pressed="false" type="button">
         <span className="chk"><svg viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" /></svg></span>
-        <span className="pain-ic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="24" height="32" rx="4"/><path d="M14 14h12M14 20h12M14 26h7"/><circle className="g" cx="34" cy="34" r="8"/><path className="g" d="M31 31l6 6M37 31l-6 6"/></svg></span>
-        <span className="who">Product Marketing Manager</span>
-        <q>Sales doesn't use half of what marketing ships.</q>
-        <p>Reps still explain the product their own way on calls, because the one-pagers and case studies don't answer what hoteliers actually ask.</p>
+        <span className="pain-ic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="14" cy="16" r="6"/><path d="M3 40v-3a11 11 0 0 1 22 0v3"/><path className="g" d="M28 8h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-6l-5 4v-4h-3a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path className="g" d="M33 13.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5"/><circle className="g" cx="35.5" cy="20.2" r=".5"/></svg></span>
+        <span className="who">Head of Sales</span>
+        <q>Our sales team finds it hard to explain our product&rsquo;s value to clients.</q>
+        <p>Every rep tells the story differently, and prospects leave the call still unsure why your product is worth switching to.</p>
       </button>
       <button className="pain rv" aria-pressed="false" type="button">
         <span className="chk"><svg viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" /></svg></span>
@@ -55,19 +55,12 @@ export default function Problems() {
         <q>Launches every quarter, a pipeline target, and no extra headcount.</q>
         <p>Content is always the thing that slips. Every month starts from a blank page instead of a system that keeps running.</p>
       </button>
-      <button className="pain pain-wide rv" aria-pressed="false" type="button">
-        <span className="chk"><svg viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" /></svg></span>
-        <span className="pain-ic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="14" cy="16" r="6"/><path d="M3 40v-3a11 11 0 0 1 22 0v3"/><path className="g" d="M28 8h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-6l-5 4v-4h-3a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path className="g" d="M33 13.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5"/><circle className="g" cx="35.5" cy="20.2" r=".5"/></svg></span>
-        <span className="who">Head of Sales</span>
-        <q>Our sales team finds it hard to explain our product&rsquo;s value to clients.</q>
-        <p>Every rep tells the story differently, and prospects leave the call still unsure why your product is worth switching to.</p>
-      </button>
     </div>
     <div className="pain-result rv" aria-live="polite">
       <div>
         <strong id="painTitle">Tick any card above.</strong>
         <p id="painText">Each one maps to something we fix. Pick what sounds familiar.</p>
-        <div className="meter" id="painMeter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div className="meter" id="painMeter"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       </div>
       <a className="btn btn-green" href="#contact">Tell us what's slowing you down <span className="arr">&rarr;</span></a>
     </div>
