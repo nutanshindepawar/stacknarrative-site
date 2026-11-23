@@ -8,7 +8,7 @@ export default function Why() {
   <div className="wrap">
     <div className="head rv">
       <span className="eyebrow">Why StackNarrative</span>
-      <h2>Not a general agency. Not an AI tool. A content engine for one industry.</h2>
+      <h2>Not a general agency. Not an AI tool. A content engine.</h2>
       <p className="lead">There are thousands of content agencies and hundreds of AI writing tools. Here's what you get with us that you won't get from either.</p>
     </div>
     <div className="why-split">
