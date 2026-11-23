@@ -176,3 +176,21 @@ export async function getLatestToolbook(limit = 4): Promise<ToolbookEntry[]> {
   ];
   return entries.sort((x, y) => y.updatedAt.localeCompare(x.updatedAt)).slice(0, limit);
 }
+
+// Latest AI agent added to the toolbook (homepage Resources row).
+export async function getLatestToolbookAgent(): Promise<ToolbookEntry | null> {
+  type Res = { slug: string; title: string; description?: string; contributor_name?: string; contributor_website?: string; updated_at: string };
+  const rows = await safe<Res[]>("toolbook agent", () =>
+    supabase(`resources?select=slug,title,description,contributor_name,contributor_website,updated_at&status=eq.published&type=eq.ai_agent&slug=not.is.null&order=updated_at.desc&limit=1`), []);
+  const r = rows[0];
+  if (!r) return null;
+  return {
+    kind: "AI agent",
+    title: r.title,
+    summary: firstPara(r.description),
+    author: r.contributor_name || "StackNarrative Team",
+    authorUrl: r.contributor_website || undefined,
+    url: `${TOOLBOOK_URL}/resource/${r.slug}`,
+    updatedAt: r.updated_at,
+  };
+}

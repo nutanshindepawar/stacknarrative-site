@@ -1136,3 +1136,4 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 
 /* Reviews: keep the first line clear of the big quote mark */
 .review blockquote{padding-right:48px}
+.res-card p{align-self:start}
