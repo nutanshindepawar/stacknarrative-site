@@ -39,6 +39,8 @@ export const DEFAULT_CASES: ClientCase[] = [
       { label: "Travel Trends Report 2026", url: "https://drive.google.com/file/d/1OB-UPmpFPxLT07TgV-j32IcdsXKTCAKG/view?usp=drive_link" },
       { label: "Case study: Minor Hotels", url: "https://www.hbxgroup.com/resources/articles/minor-hotels" },
       { label: "Product update: Partner Accelerator Programme", url: "https://discover.hotelbeds.com/resources/insight/partner-accelerator-programme" },
+      { label: "Why More Hotels Are Choosing HBX Group as Their Distribution Partner", url: "https://www.hbxgroup.com/resources/articles/how-boost-hotel-revenue" },
+      { label: "Generative AI in Hotel Marketing: How to Use it for Smarter Hospitality", url: "https://www.hbxgroup.com/resources/articles/generative-ai-hotel-marketing" },
       { label: "Hotel Segmentation", url: "https://www.hbxgroup.com/resources/articles/hotel-segmentation" },
       { label: "How to Attract Gen Z Travellers to Hotels", url: "https://www.hbxgroup.com/resources/articles/how-attract-gen-z-travellers-hotels" },
     ],
