@@ -21,7 +21,7 @@ const STEPS = [
     n: "03",
     title: "Thought leadership & product messaging",
     text: "Founder expertise, customer insight and product knowledge become content buyers trust.",
-    you: "Your time: short SME sessions",
+    you: "Your time: short Subject Matter Expert (SME) sessions",
     img: "/img/step-stage.jpg",
     alt: "Founder speaking at a podium during an industry event",
   },
