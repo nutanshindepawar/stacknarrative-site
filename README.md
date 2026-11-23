@@ -102,7 +102,7 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | blog-window.jpg | https://www.pexels.com/photo/17049747/ (Tran Nhu Tuan) |
 | step-research.jpg | https://www.pexels.com/photo/12663090/ |
 | step-strategy.jpg | https://www.pexels.com/photo/7108454/ |
-| step-stage.jpg | https://www.pexels.com/photo/34774347/ |
+| step-stage.jpg | https://www.pexels.com/photo/6949925/ |
 | step-lobby.jpg | https://www.pexels.com/photo/10890566/ |
 
 `founder-nutan.jpg` is Nutan's own photo.

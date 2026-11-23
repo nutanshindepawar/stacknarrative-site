@@ -23,7 +23,7 @@ const STEPS = [
     text: "Founder expertise, customer insight and product knowledge become content buyers trust.",
     you: "Your time: short SME sessions",
     img: "/img/step-stage.jpg",
-    alt: "Founder speaking on stage at an industry conference",
+    alt: "Founder speaking at a podium during an industry event",
   },
   {
     n: "04",
