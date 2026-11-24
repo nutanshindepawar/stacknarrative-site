@@ -24,7 +24,7 @@ export default function Hero() {
         The example lines are generic illustrations, not quotes from a client. */}
     <div className="hero-photo" role="img" aria-label="Before: a list of features, and your buyer is confused by your messaging. After StackNarrative: the buyer hears the value in plain words and says: I get it, let's talk.">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="hp-img" src="/img/hero-marketer.jpg" alt="" width={1000} height={1500} fetchPriority="high" />
+      <img className="hp-img" src="/img/hero-nutan.jpg" alt="Nutan Pawar, founder of StackNarrative, working at her desk" width={1000} height={1250} fetchPriority="high" />
       <div className="ba-card ba-before" aria-hidden="true">
         <span className="ba-k"><i className="ba-dot"></i>Before</span>
         <p className="ba-say">&ldquo;Real-time 2-way sync, 40+ integrations, open API&hellip;&rdquo;</p>

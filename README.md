@@ -94,7 +94,6 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 
 | File | Pexels photo |
 |---|---|
-| hero-marketer.jpg | https://www.pexels.com/photo/17489837/ |
 | why-team.jpg | https://www.pexels.com/photo/7710141/ |
 | contact-call.jpg | https://www.pexels.com/photo/5956819/ (Katrin Bolovtsova) |
 | agents-laptop.jpg | https://www.pexels.com/photo/39506543/ (quang vinh) |
@@ -105,6 +104,6 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | step-stage.jpg | https://www.pexels.com/photo/6949925/ |
 | step-lobby.jpg | https://www.pexels.com/photo/10890566/ |
 
-`founder-nutan.jpg` is Nutan's own photo.
+`founder-nutan.jpg` and `hero-nutan.jpg` are Nutan's own photos.
 
 Client reviews live in `components/home/reviews.tsx` (`REVIEWS`). The section stays hidden until it has at least one real review.
