@@ -1117,3 +1117,6 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 .ba-before{background:#ECEAE6}
 .ba-before .ba-say{color:var(--ink-70)}
 @media (prefers-reduced-motion:no-preference){.ba-before{animation:cardIn .6s .2s both}}
+/* Hero photo is Nutan at her laptop: keep the After card below the laptop, over the desk */
+.ba-after{top:auto;bottom:-28px}
+@media (max-width:480px){.ba-after{bottom:-64px}.hero-photo{margin-bottom:70px}}
