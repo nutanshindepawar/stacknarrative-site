@@ -26,11 +26,6 @@ export default function ServicesPage({ posts, toolbookAgent, agents }: { posts: 
             <span className="eyebrow" style={{ display: "flex" }}>{SERVICES_INTRO.eyebrow}</span>
             <h1 style={{ marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)" }}>{SERVICES_INTRO.title}</h1>
             <p className="lead">{SERVICES_INTRO.full}</p>
-            <nav className="sp-jump" aria-label="Jump to a service">
-              {SERVICES.map((s) => (
-                <a key={s.id} href={`#svc-${s.id}`}><span aria-hidden="true">{SVC_ICONS[s.id]}</span>{s.title}</a>
-              ))}
-            </nav>
           </div>
           <figure className="ph-photo rv">
             {/* eslint-disable-next-line @next/next/no-img-element */}

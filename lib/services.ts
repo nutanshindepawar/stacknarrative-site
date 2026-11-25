@@ -22,7 +22,7 @@ export const SERVICES_INTRO = {
   eyebrow: "Services",
   title: "One job: make your product easy to understand.",
   short: "Every buyer meets your product without you in the room. We make sure it explains itself. Three ways to work with us; start with any.",
-  full: "Every buyer meets your product without you in the room. On your website, in a forwarded PDF, in an AI answer, in a LinkedIn post. We make sure it explains itself everywhere. There are three ways we do it, and you can start with any of them.",
+  full: "Buyers meet your product without you in the room: on your website, in a forwarded PDF, in an AI answer. We make sure it explains itself. Three ways to work with us; start with any.",
 };
 
 export const SERVICES: Service[] = [
