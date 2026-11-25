@@ -30,7 +30,7 @@ export const SERVICES: Service[] = [
     id: "content",
     n: "01",
     title: "Content that explains your product",
-    startHere: "Start here if you know what to say and need it made.",
+    startHere: "Start here if your content strategy and brand positioning are clear.",
     summary: "Your product knowledge, research and expertise, turned into marketing and sales assets.",
     lead: "Sometimes you don't need another strategy exercise. You need content that gets the job done.",
     leadMore: "We turn your product knowledge, research and expertise into marketing and sales assets.",
