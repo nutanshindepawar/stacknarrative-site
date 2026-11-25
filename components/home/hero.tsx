@@ -1,12 +1,26 @@
 
 /* Converted from the reference design (D:\StackNarrative\website\index.html). */
-export default function Hero() {
+import type { ClientCase } from "@/lib/defaults";
+import { CaseCard } from "../shared";
+
+// "Trusted by" strip: these five names only. A name with a matching Work case shows that exact case card
+// in a pop-up on hover, keyboard focus or tap. Names without a case (Red Bull) show no pop-up.
+const TRUSTED = [
+  { name: "HBX Group", match: "HBX Group" },
+  { name: "Dharma Hospitality", match: "Dharma Hospitality" },
+  { name: "Welcome Pickups", match: "Welcome Pickups" },
+  { name: "Zatlas", match: "Zatlas" },
+  { name: "Red Bull", match: "Red Bull" },
+];
+
+export default function Hero({ cases = [] }: { cases?: ClientCase[] }) {
+  const trusted = TRUSTED.map((t) => ({ ...t, c: cases.find((c) => c.name.startsWith(t.match)) }));
   return (
     <>
 <section className="hero">
   <div className="wrap hero-grid">
     <div>
-      <span className="eyebrow">The content engine for B2B tech · specialising in travel &amp; hotel tech</span>
+      <span className="eyebrow">The content engine for B2B tech · specializing in travel &amp; hotel tech</span>
       <h1 style={{marginTop: "22px"}}><span className="line">Your product is great.</span><span className="line">Your buyers just <span className="hl">don't get it</span> yet.</span></h1>
       <p className="lead">We turn what your team already knows into content buyers understand and trust.</p>
       <ul className="hero-flow">
@@ -50,12 +64,20 @@ export default function Hero() {
 <div className="trusted">
   <div className="wrap trusted-in">
     <span className="label">Trusted by</span>
-    <div className="marquee" aria-label="Clients: Welcome Pickups, Dharma, HBX Group, Zatlas, Technogym, Trek The Himalayas, 57hours, Adventure Tripr, Red Bull">
-      <div className="marquee-track" aria-hidden="true">
-        <span>Welcome Pickups</span><span>Dharma</span><span>HBX Group</span><span>Zatlas</span><span>Technogym</span><span>Trek The Himalayas</span><span>57hours</span><span>Adventure Tripr</span><span>Red Bull</span>
-        <span>Welcome Pickups</span><span>Dharma</span><span>HBX Group</span><span>Zatlas</span><span>Technogym</span><span>Trek The Himalayas</span><span>57hours</span><span>Adventure Tripr</span><span>Red Bull</span>
-      </div>
-    </div>
+    <ul className="tr-list" aria-label="Clients">
+      {trusted.map((t, i) =>
+        t.c ? (
+          <li key={t.name} className={`tr-item${i >= trusted.length - 2 ? " tr-end" : ""}`}>
+            <button type="button" className="tr-name" aria-expanded="false" aria-controls={`tr-pop-${i}`}>{t.name}</button>
+            <div className="tr-pop" id={`tr-pop-${i}`}>
+              <CaseCard c={t.c} reveal={false} />
+            </div>
+          </li>
+        ) : (
+          <li key={t.name} className="tr-item"><span className="tr-name tr-plain">{t.name}</span></li>
+        )
+      )}
+    </ul>
   </div>
 </div>
 

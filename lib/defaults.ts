@@ -33,7 +33,7 @@ export const DEFAULT_CASES: ClientCase[] = [
     website: "https://www.hbxgroup.com",
     segment: "Travel distribution",
     summary:
-      "A global travel technology platform connecting hotels, distributors and travel brands. We turned market research, traveller trends and product expertise into reports, product messaging and customer education for hotel partners.",
+      "A global travel technology platform connecting hotels, distributors and travel brands. We turned market research, traveler trends and product expertise into reports, product messaging and customer education for hotel partners.",
     deliverables: ["Travel Trends Report 2026", "Case studies", "Blogs"],
     links: [
       { label: "Travel Trends Report 2026", url: "https://drive.google.com/file/d/1OB-UPmpFPxLT07TgV-j32IcdsXKTCAKG/view?usp=drive_link" },
@@ -62,9 +62,9 @@ export const DEFAULT_CASES: ClientCase[] = [
   {
     name: "Welcome Pickups",
     website: "https://www.welcomepickups.com",
-    segment: "Traveller experience",
+    segment: "Traveler experience",
     summary:
-      "An airport transfer and traveller experience platform in 350+ cities. We built AEO/SEO pages grounded in market research and verified data. They rank on Google's first page and appear in Google's AI Overviews, bringing in high-intent travellers across international markets.",
+      "An airport transfer and traveler experience platform in 350+ cities. We built AEO/SEO pages grounded in market research and verified data. They rank on Google's first page and appear in Google's AI Overviews, bringing in high-intent travelers across international markets.",
     deliverables: ["50+ SEO pages in 3 months", "Research-backed", "Results-driven"],
     links: [
       { label: "Airport-to-city transfer AEO/SEO pages", url: "https://www.welcomepickups.com/lisbon/airport-transfer-to-city/" },

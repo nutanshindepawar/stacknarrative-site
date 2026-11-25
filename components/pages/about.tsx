@@ -10,7 +10,7 @@ export default function About() {
       <a className="crumb" href="/">&larr; Back to home</a>
       <span className="eyebrow" style={{display: "flex"}}>About StackNarrative</span>
       <h1 style={{marginTop: "18px", fontSize: "clamp(2.4rem,5vw,4.2rem)"}}>We help great B2B tech products become easy to <span className="hl">understand, trust and buy.</span></h1>
-      <p className="lead">We work with B2B tech companies, specialising in travel and hotel tech.</p>
+      <p className="lead">We work with B2B tech companies, specializing in travel and hotel tech.</p>
     </div>
       <figure className="ph-photo rv">
         {/* eslint-disable-next-line @next/next/no-img-element */}

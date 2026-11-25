@@ -16,7 +16,7 @@ export default async function Home() {
   const [cases, posts, agents, toolbookAgent] = await Promise.all([getCases(), getPosts(), getAgents(), getLatestToolbookAgent()]);
   return (
     <>
-      <Hero />
+      <Hero cases={cases} />
       <Results />
       <Problems />
       <Process />

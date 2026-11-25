@@ -1120,3 +1120,31 @@ section#services.dark{background:radial-gradient(50% 60% at 100% 0%,var(--green-
 /* Hero photo is Nutan at her laptop: keep the After card below the laptop, over the desk */
 .ba-after{top:auto;bottom:-28px}
 @media (max-width:480px){.ba-after{bottom:-64px}.hero-photo{margin-bottom:70px}}
+
+/* =========================================================================
+   Trusted by: five client names; hovering (or focusing / tapping) a name shows its Work card
+   ========================================================================= */
+.trusted{position:relative;z-index:5}
+.tr-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px 44px;flex:1}
+.tr-item{position:relative}
+.tr-name{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:-.02em;color:var(--ink);background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline dotted var(--green);text-decoration-thickness:2px;text-underline-offset:7px}
+.tr-name:hover,.tr-item.open .tr-name{text-decoration-style:solid}
+.tr-name:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:4px}
+.tr-plain{cursor:default;text-decoration:none;display:inline-block}
+.tr-pop{position:absolute;top:100%;left:-14px;width:430px;max-width:calc(100vw - 32px);padding-top:12px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:40}
+.tr-end .tr-pop{left:auto;right:-14px}
+.tr-item:hover .tr-pop,.tr-item:focus-within .tr-pop,.tr-item.open .tr-pop{opacity:1;visibility:visible;transform:none}
+.tr-pop .case{background:var(--white);border-color:transparent;box-shadow:var(--shadow);padding:22px 24px;max-height:min(70vh,560px);overflow:auto}
+.tr-pop .case h3{font-size:1.25rem}
+.tr-pop .case p{font-size:.92rem}
+@media (max-width:700px){
+  .trusted-in{position:relative}
+  .tr-list{gap:8px 26px}
+  .tr-name{font-size:1.15rem}
+  .tr-item{position:static}
+  .tr-pop,.tr-end .tr-pop{left:16px;right:16px;width:auto;max-width:none}
+}
+
+/* Footer: legal brand line under the copyright */
+.foot-legal{display:grid;gap:4px}
+.foot-legal small{font-size:.8rem;color:var(--ink-50)}

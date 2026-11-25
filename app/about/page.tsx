@@ -7,7 +7,7 @@ import { FOUNDER, SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "StackNarrative helps great B2B tech products, specialising in travel and hotel tech, become easy to understand, trust and buy. Meet founder Nutan Pawar: engineer turned content strategist.",
+    "StackNarrative helps great B2B tech products, specializing in travel and hotel tech, become easy to understand, trust and buy. Meet founder Nutan Pawar: engineer turned content strategist.",
   alternates: { canonical: "/about" },
 };
 

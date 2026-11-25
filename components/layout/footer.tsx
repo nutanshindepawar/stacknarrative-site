@@ -5,7 +5,10 @@ export default function Footer() {
     <>
 <footer>
   <div className="wrap foot">
-    <span>&copy; {new Date().getFullYear()} StackNarrative · The content engine for B2B tech, specialising in travel &amp; hotel tech</span>
+    <div className="foot-legal">
+      <span>&copy; 2027 StackNarrative · The content engine for B2B tech, specializing in travel &amp; hotel tech</span>
+      <small>StackNarrative is a brand of Pawarful Content Company. All rights reserved.</small>
+    </div>
     <nav aria-label="Footer">
       <a href="/about">About</a>
       <a href="/#how-we-work">How we work</a>

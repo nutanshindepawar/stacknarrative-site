@@ -152,7 +152,7 @@
           done.innerHTML = '<span class="eyebrow">Message sent</span><h3>Thanks, ' + esc(data.name.split(" ")[0]) + ". We've got it.</h3>" +
             "<p>Your message is on its way to " + CONTACT_EMAIL + ". We'll reply to " + esc(data.email) + ' soon.</p><a class="btn btn-ghost" href="/">Back to home</a>';
         } else {
-          var mail = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Enquiry from " + data.name + " (" + data.company + ")") + "&body=" + encodeURIComponent(summary);
+          var mail = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Inquiry from " + data.name + " (" + data.company + ")") + "&body=" + encodeURIComponent(summary);
           done.innerHTML = '<span class="eyebrow">One more step</span><h3>Your message isn\'t sent yet.</h3>' +
             "<p>We couldn't send it automatically. Open it in your email app to send it to " + CONTACT_EMAIL + ", or copy it and paste it into any email.</p>" +
             '<div class="acts"><a class="btn btn-primary" id="cf-mail">Open in email app <span class="arr">&rarr;</span></a><button class="btn btn-ghost" type="button" id="cf-copy">Copy message</button><button class="btn btn-ghost" type="button" id="cf-edit">Edit</button></div>' +
@@ -309,4 +309,28 @@
     if ("IntersectionObserver" in window && !reduced) new IntersectionObserver(function (es, o) { es.forEach(function (e) { if (e.isIntersecting) { venn.classList.add("in"); o.disconnect(); } }); }, { threshold: 0.5 }).observe(venn);
     else venn.classList.add("in");
   }
+})();
+
+// Trusted by: tap / click a client name to open its Work card (hover and keyboard focus also open it via CSS)
+(function () {
+  var items = document.querySelectorAll(".tr-item");
+  if (!items.length) return;
+  function closeAll(except) {
+    items.forEach(function (it) {
+      if (it !== except) { it.classList.remove("open"); var b = it.querySelector("button.tr-name"); if (b) b.setAttribute("aria-expanded", "false"); }
+    });
+  }
+  items.forEach(function (it) {
+    var b = it.querySelector("button.tr-name");
+    if (!b) return;
+    b.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = !it.classList.contains("open");
+      closeAll(it);
+      it.classList.toggle("open", open);
+      b.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".tr-item")) closeAll(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeAll(); if (document.activeElement && document.activeElement.closest(".tr-item")) document.activeElement.blur(); } });
 })();

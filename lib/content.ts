@@ -63,7 +63,7 @@ const SAMPLE_POST: Post = {
   excerpt: "A preview-only sample used to check the blog layout. It never appears in production builds.",
   category: "Positioning",
   quickAnswer: "This box shows your post's quick answer: one or two sentences that directly answer the main question, so AI engines and featured snippets can quote you.",
-  keyTakeaways: ["Key takeaways appear as a short list", "They summarise the post at a glance", "Up to six per post"],
+  keyTakeaways: ["Key takeaways appear as a short list", "They summarize the post at a glance", "Up to six per post"],
   faqs: [{ question: "Where do FAQs come from?", answer: "From the FAQs field on each post in Sanity. They also become FAQ structured data." }],
   body: [block("First section", "h2"), block("Body text renders here."), block("Second section", "h2"), block("More body text."), block("Third section", "h2"), block("A pull quote looks like this.", "blockquote")],
   authorName: "Nutan Pawar",

@@ -20,8 +20,8 @@ export default function Why() {
       <ol className="why-steps">
       <li className="why-step rv"><span className="ws-n">01</span>
         <svg className="ic" viewBox="0 0 46 46"><rect x="6" y="14" width="34" height="24" rx="5" /><path d="M15 14v-4a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4" /><path className="gs" d="M6 24h34" /></svg>
-        <h3>B2B tech, specialising in travel &amp; hotel tech</h3>
-        <p>We work with B2B tech companies, with deep specialisation in travel tech and hotel tech. We don't learn your industry on your time. We already know your buyers, your category and your competitors.</p>
+        <h3>B2B tech, specializing in travel &amp; hotel tech</h3>
+        <p>We work with B2B tech companies, with deep specialization in travel tech and hotel tech. We don't learn your industry on your time. We already know your buyers, your category and your competitors.</p>
       </li>
       <li className="why-step rv"><span className="ws-n">02</span>
         <svg className="ic" viewBox="0 0 46 46"><circle cx="20" cy="20" r="12" /><path d="M29 29l9 9" /><path className="gs" d="M14 22l4-5 4 4 4-6" /></svg>

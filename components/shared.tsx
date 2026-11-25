@@ -6,13 +6,13 @@ import { LINKEDIN_URL, TOOLBOOK_URL } from "@/lib/site";
 export const fmtDate = (d?: string) => {
   if (!d) return "";
   const t = new Date(d);
-  return isNaN(t.getTime()) ? "" : t.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  return isNaN(t.getTime()) ? "" : t.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 };
 const pad = (n: number) => String(n).padStart(2, "0");
 
-export function CaseCard({ c }: { c: ClientCase }) {
+export function CaseCard({ c, reveal = true }: { c: ClientCase; reveal?: boolean }) {
   return (
-    <article className="case rv">
+    <article className={`case${reveal ? " rv" : ""}`}>
       <div className="top">
         <h3>
           {c.website ? (
