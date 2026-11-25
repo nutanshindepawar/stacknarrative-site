@@ -21,7 +21,7 @@ export type Service = {
 export const SERVICES_INTRO = {
   eyebrow: "Services",
   title: "One job: make your product easy to understand.",
-  short: "Every buyer meets your product without you in the room. We make sure it explains itself. Three ways to work with us; start with any.",
+  short: "Every buyer meets your product without you in the room: through your blogs, LinkedIn posts or sales assets. We make sure it explains itself. Three ways to work with us; start with any.",
   full: "Buyers meet your product without you in the room: on your website, in a forwarded PDF, in an AI answer. We make sure it explains itself. Three ways to work with us; start with any.",
 };
 
