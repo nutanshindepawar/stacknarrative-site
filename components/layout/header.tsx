@@ -18,7 +18,7 @@ export default function Header({ pages = [] }: { pages?: MenuPage[] }) {
     </a>
     <button className="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <nav className="nav-links" id="navLinks" aria-label="Main">
-      <a href="/#services">Services</a>
+      <a href="/services">Services</a>
       <div className="dd">
         <button className="dd-btn" type="button" aria-expanded="false" aria-controls="dd-why">Why us <span className="car" aria-hidden="true"></span></button>
         <div className="dd-menu" id="dd-why">

@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [posts, pages] = await Promise.all([getPosts(), getPages()]);
   const now = new Date();
-  const fixed = ["", "/about", "/blog", "/agents", "/toolbook", "/contact"].map((p) => ({
+  const fixed = ["", "/services", "/about", "/blog", "/agents", "/toolbook", "/contact"].map((p) => ({
     url: `${SITE_URL}${p}`,
     lastModified: now,
     changeFrequency: (p === "/blog" || p === "" ? "weekly" : "monthly") as "weekly" | "monthly",

@@ -10,6 +10,7 @@ export default function Footer() {
       <small>StackNarrative is a brand of Pawarful Content Company. All rights reserved.</small>
     </div>
     <nav aria-label="Footer">
+      <a href="/services">Services</a>
       <a href="/about">About</a>
       <a href="/#how-we-work">How we work</a>
       <a href="/#work">Work</a>
