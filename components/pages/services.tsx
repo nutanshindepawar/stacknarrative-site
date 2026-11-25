@@ -13,8 +13,18 @@ export default function ServicesPage({ posts, toolbookAgent, agents }: { posts: 
   const agent = live[live.length - 1] || agents[0];
   const cards: Card[] = [
     ...posts.slice(0, 2).map((p, i) => ({ k: i === 0 ? "Blog · Latest" : "Blog", title: p.title, text: p.excerpt, href: `/blog/${p.slug}`, cta: "Read the post", kind: "post" as const })),
-    ...(toolbookAgent ? [{ k: "AI agent", title: toolbookAgent.title, text: toolbookAgent.summary, href: toolbookAgent.url, cta: "See the agent", ext: true, kind: "tool" as const }] : []),
-    ...(agent ? [{ k: "AI agent", title: agent.name, text: agent.job, href: "/agents", cta: "See our AI agents", kind: "tool" as const }] : []),
+    // Latest AI agent: the newest one added to the toolbook, or (if none) the latest from the Agents page.
+    ...(toolbookAgent
+      ? [{ k: "AI agent", title: toolbookAgent.title, text: toolbookAgent.summary, href: toolbookAgent.url, cta: "See the agent", ext: true, kind: "tool" as const }]
+      : agent ? [{ k: "AI agent", title: agent.name, text: agent.job, href: "/agents", cta: "See our AI agents", kind: "tool" as const }] : []),
+    {
+      k: "Free and open · AI Content Ops Toolbook",
+      title: "The B2B AI content operations playbook, built in the open.",
+      text: "12 phases of content operations, from business strategy to knowledge-base updates.",
+      href: "/toolbook",
+      cta: "Explore the toolbook",
+      kind: "tool" as const,
+    },
   ];
 
   return (
