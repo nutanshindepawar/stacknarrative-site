@@ -51,7 +51,7 @@ export const SERVICES: Service[] = [
     id: "clarity",
     n: "02",
     title: "Clarity before content",
-    startHere: "Start here if every piece sounds different.",
+    startHere: "Start here if your content strategy or brand positioning is unclear.",
     summary: "What to say, who to say it to and why they should care, before you create more content.",
     lead: "Before creating more content, we help you figure out what to say, who to say it to and why they should care.",
     insight: "If your founder, your sales team and your website each describe the product differently, buyers hear three different products. More content won't fix that. One clear story will.",
