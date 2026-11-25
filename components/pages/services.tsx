@@ -13,7 +13,7 @@ export default function ServicesPage({ posts, toolbookAgent, agents }: { posts: 
   const agent = live[live.length - 1] || agents[0];
   const cards: Card[] = [
     ...posts.slice(0, 2).map((p, i) => ({ k: i === 0 ? "Blog · Latest" : "Blog", title: p.title, text: p.excerpt, href: `/blog/${p.slug}`, cta: "Read the post", kind: "post" as const })),
-    ...(toolbookAgent ? [{ k: "AI tool · Toolbook", title: toolbookAgent.title, text: toolbookAgent.summary, href: toolbookAgent.url, cta: "See the tool", ext: true, kind: "tool" as const }] : []),
+    ...(toolbookAgent ? [{ k: "AI agent", title: toolbookAgent.title, text: toolbookAgent.summary, href: toolbookAgent.url, cta: "See the agent", ext: true, kind: "tool" as const }] : []),
     ...(agent ? [{ k: "AI agent", title: agent.name, text: agent.job, href: "/agents", cta: "See our AI agents", kind: "tool" as const }] : []),
   ];
 
