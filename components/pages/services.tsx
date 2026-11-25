@@ -34,7 +34,7 @@ export default function ServicesPage({ posts, toolbookAgent, agents }: { posts: 
           </div>
           <figure className="ph-photo rv">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/services-hero.jpg" alt="Consultant talking through a plan with clients in a bright office" width={1200} height={800} style={{ "--pos": "62% 50%" } as React.CSSProperties} />
+            <img src="/img/services-hero.jpg" alt="Hotel manager reviewing a tablet demo with a hotel tech vendor" width={1200} height={800} style={{ "--pos": "52% 50%" } as React.CSSProperties} />
           </figure>
         </div>
       </section>

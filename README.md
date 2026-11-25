@@ -106,7 +106,7 @@ Stock photos in `public/img/` are from Pexels (free to use, no attribution requi
 | svc-content.jpg | https://www.pexels.com/photo/6953964/ |
 | svc-clarity.jpg | https://www.pexels.com/photo/7693692/ |
 | svc-systems.jpg | https://www.pexels.com/photo/39219903/ |
-| services-hero.jpg | https://www.pexels.com/photo/7821522/ |
+| services-hero.jpg | https://www.pexels.com/photo/6284865/ |
 
 `founder-nutan.jpg` and `hero-nutan.jpg` are Nutan's own photos.
 
