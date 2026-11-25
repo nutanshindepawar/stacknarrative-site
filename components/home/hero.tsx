@@ -26,7 +26,7 @@ export default function Hero({ cases = [] }: { cases?: ClientCase[] }) {
       <ul className="hero-flow">
         <li><span className="k">You bring</span><span>Market insight, founder expertise, product knowledge</span></li>
         <li><span className="k">We deliver</span><span>Positioning, thought leadership, product messaging, sales content</span></li>
-        <li><span className="k">Powered by</span><span>AI content operations that need very little of your time</span></li>
+        <li><span className="k">We set up</span><span>Efficient AI content operations that scale your production</span></li>
       </ul>
       <div className="hero-ctas">
         <a className="btn btn-primary" href="#contact">Talk to us about your content <span className="arr">&rarr;</span></a>
