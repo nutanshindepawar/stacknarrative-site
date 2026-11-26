@@ -1,0 +1,78 @@
+/* State of Hotel Tech Brands explorer. Logo colors only (cream, ink, green) via the site tokens. */
+.rx-hero h1{margin-top:18px;font-size:clamp(2.4rem,5vw,4.2rem)}
+.rx-asof{margin-top:18px;font-size:.92rem;color:var(--ink-50)}
+.rx-h{font-size:clamp(1.5rem,2.4vw,1.9rem);margin:56px 0 20px}
+.rx-section{padding-top:30px}
+
+/* Key findings (static, readable by search and answer engines) */
+.rx-key{padding:20px 0 10px}
+.rx-key .rx-h{margin-top:0}
+.rx-findings{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.rx-findings li{background:#fff;border:1px solid var(--ink-12);border-radius:var(--r);padding:20px 22px;font-size:1.02rem;line-height:1.5}
+.rx-findings b{font-size:1.5rem;letter-spacing:-.02em;margin-right:2px}
+
+/* Filters: one row above the charts */
+.rx{margin-top:14px}
+.rx-filters{position:sticky;top:76px;z-index:5;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;background:var(--paper,var(--cream));padding:14px 0 12px;border-bottom:1px solid var(--ink-12)}
+.rx-filters label{display:grid;gap:6px}
+.rx-filters label span{font:600 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-70)}
+.rx-filters select{font:500 .95rem var(--body);color:var(--ink);background:#fff;border:1.5px solid var(--ink-12);border-radius:999px;padding:9px 34px 9px 14px;min-width:190px;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.rx-filters select:hover{border-color:var(--ink)}
+.rx-seg{display:inline-flex;border:1.5px solid var(--ink-12);border-radius:999px;padding:3px;background:#fff}
+.rx-seg button{font:600 .85rem var(--body);border:0;background:none;color:var(--ink-70);padding:7px 12px;border-radius:999px;cursor:pointer}
+.rx-seg button.on{background:var(--ink);color:var(--cream)}
+.rx-reset{font:600 .88rem var(--body);background:none;border:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:9px 4px}
+.rx-scope{margin:14px 0 0;color:var(--ink-70);font-size:.95rem}
+
+/* Stat tiles */
+.rx-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
+.rx-tile{background:#fff;border:1px solid var(--ink-12);border-radius:14px;padding:16px 18px;display:grid;gap:4px}
+.rx-tile b{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.rx-tile span{font-size:.88rem;color:var(--ink-70);line-height:1.35}
+
+/* Chart grid */
+.rx-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rx-stack{display:grid;gap:18px;align-content:start}
+@media (max-width:900px){.rx-grid{grid-template-columns:1fr}}
+.rx-chart{margin:0;background:#fff;border:1px solid var(--ink-12);border-radius:var(--r);padding:22px 22px 14px}
+.rx-chart figcaption h3{font-size:1.08rem}
+.rx-chart figcaption p{font-size:.86rem;color:var(--ink-50);margin-top:4px;line-height:1.4}
+.rx-empty{color:var(--ink-50);font-size:.92rem;margin-top:14px}
+
+/* Bars: <=18px thick, 4px rounded data end, square at baseline, value at the tip */
+.rx-bars{position:relative;margin-top:16px;display:grid;gap:2px}
+.rx-row{display:grid;grid-template-columns:minmax(120px,38%) 1fr;align-items:center;gap:12px;padding:5px 6px;margin:0 -6px;border-radius:8px;border:0;background:none;text-align:left;font:inherit;color:inherit;width:calc(100% + 12px)}
+.rx-row.click{cursor:pointer}
+.rx-row:hover{background:var(--ink-06)}
+.rx-lab{font-size:.88rem;line-height:1.25;overflow-wrap:anywhere}
+.rx-track{display:flex;align-items:center;gap:8px;min-width:0}
+.rx-bar{display:block;height:16px;background:var(--ink);border-radius:0 4px 4px 0;flex:none;max-width:calc(100% - 46px)}
+.rx-row.sel .rx-bar{background:var(--green)}
+.rx-row.sel .rx-lab{font-weight:700}
+.rx-val{font:600 .82rem var(--mono);color:var(--ink-70);white-space:nowrap}
+.rx-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--cream);font-size:.8rem;line-height:1.35;padding:7px 10px;border-radius:8px;max-width:260px;z-index:3;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+
+/* Table view */
+.rx-table{margin-top:10px}
+.rx-table summary{font:600 .8rem var(--body);color:var(--ink-70);cursor:pointer;padding:6px 0}
+.rx-table table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:6px}
+.rx-table th,.rx-table td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--ink-12)}
+.rx-table th{font-weight:700;color:var(--ink-70)}
+
+/* Company table (only when names are published) */
+.rx-search{width:100%;max-width:420px;font:500 .95rem var(--body);border:1.5px solid var(--ink-12);border-radius:999px;padding:10px 16px;margin-bottom:14px;background:#fff}
+.rx-tablewrap{overflow-x:auto;background:#fff;border:1px solid var(--ink-12);border-radius:var(--r)}
+.rx-companies{width:100%;border-collapse:collapse;font-size:.88rem}
+.rx-companies th,.rx-companies td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--ink-12)}
+.rx-companies td span{display:block;color:var(--ink-50);margin-top:3px}
+
+/* Method */
+.rx-method{padding-top:40px}
+.rx-method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.rx-method-grid div{border-top:3px solid var(--green);padding-top:14px}
+.rx-method-grid p{color:var(--ink-70);font-size:.95rem;margin-top:6px}
+.rx-fine{margin-top:26px;font-size:.88rem;color:var(--ink-50)}
+.rx-fine a{color:var(--ink)}
+@media (max-width:1100px){.rx-tiles{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.rx-tiles{grid-template-columns:repeat(2,1fr)}.rx-filters{position:static}.rx-filters select{min-width:0;width:100%}.rx-filters label{flex:1 1 100%}}
