@@ -17,6 +17,7 @@ export default function Footer() {
       <a href="/toolbook">Toolbook</a>
       <a href="/agents">AI Agents</a>
       <a href="/blog">Blog</a>
+      <a href="/research/state-of-hotel-tech-brands">State of Hotel Tech Brands 2027</a>
       <a href="/contact">Contact</a>
       <a href="https://resources.stacknarrative.com/HospitalityTechFounderLinkedInPlaybook.pdf" target="_blank" rel="noopener">Founder LinkedIn Playbook</a>
     </nav>

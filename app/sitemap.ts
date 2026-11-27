@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
   return [
     ...fixed,
+    { url: `${SITE_URL}/research/state-of-hotel-tech-brands`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
     ...posts.map((p) => ({ url: `${SITE_URL}/blog/${p.slug}`, lastModified: p.publishedAt ? new Date(p.publishedAt) : now, changeFrequency: "monthly" as const, priority: 0.8 })),
     ...pages.map((p) => ({ url: `${SITE_URL}/${p.slug}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 })),
   ];

@@ -1,0 +1,30 @@
+/* State of Hotel Tech Brands 2027: crawlable parts of the page (the interactive explorer styles itself) */
+.htb-hero{padding-bottom:28px}
+.htb-hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:.98;letter-spacing:-.035em}
+.htb-tag{display:flex}
+.htb-tag i{width:8px;height:8px;border-radius:50%;background:var(--green,#9BC86F);display:inline-block}
+.htb-sub{font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:600;letter-spacing:-.015em;margin-top:18px;max-width:30ch;line-height:1.25}
+.htb-sub em{font-style:normal;background:linear-gradient(transparent 62%,rgba(155,200,111,.55) 62%)}
+.htb-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.92rem;color:var(--ink-70)}
+.htb-facts b{color:var(--ink,#232323)}
+.htb-key{padding:8px 0 0}
+.htb-key h2,.htb-data h2,.htb-faq h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.htb-findings{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;counter-reset:f}
+.htb-findings li{counter-increment:f;background:#FBF8F5;border:1px solid rgba(35,35,35,.12);border-radius:16px;padding:14px 16px 14px 52px;position:relative;font-size:.98rem;line-height:1.45}
+.htb-findings li::before{content:counter(f,decimal-leading-zero);position:absolute;left:16px;top:14px;font-weight:800;color:#5E8E3A;font-size:.9rem}
+.htb-noscript{padding:20px 24px;border:1.5px dashed rgba(35,35,35,.2);border-radius:16px}
+.htb-data,.htb-faq{padding:56px 0 0}
+.htb-tables,.htb-faqs{display:grid;gap:8px;margin-top:18px}
+.htb-tables details,.htb-faqs details{background:#FBF8F5;border:1px solid rgba(35,35,35,.12);border-radius:14px;padding:0 18px}
+.htb-tables summary,.htb-faqs summary{cursor:pointer;font-weight:700;padding:14px 0;list-style-position:inside}
+.htb-faqs p{padding:0 0 16px;color:var(--ink-70);max-width:75ch}
+.htb-tw{overflow-x:auto;padding-bottom:14px}
+.htb-table{width:100%;border-collapse:collapse;font-size:.93rem}
+.htb-table caption{text-align:left;color:var(--ink-70);font-size:.85rem;padding-bottom:8px}
+.htb-table th,.htb-table td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(35,35,35,.1)}
+.htb-table thead th{font-size:.8rem;color:var(--ink-70);font-weight:600}
+.htb-table td{font-variant-numeric:tabular-nums}
+.htb-table tbody th{font-weight:500}
+.htb-fine{margin-top:18px;font-size:.88rem;color:var(--ink-70)}
+.htb-faq{padding-bottom:72px}
+@media(max-width:760px){.htb-findings{grid-template-columns:1fr}}
